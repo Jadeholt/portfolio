@@ -1,20 +1,20 @@
 /* ===== CSS Variables & Reset ===== */
 :root {
     --bg-primary: #ffffff;
-    --bg-secondary: #f7f8fc;
+    --bg-secondary: #ffffff;
     --bg-card: #ffffff;
-    --bg-card-hover: #fafbff;
-    --text-primary: #2d3748;
-    --text-secondary: #5a6577;
-    --text-muted: #a0aab8;
-    --accent: #4f6df5;
-    --accent-light: #6b83f7;
-    --accent-dark: #3b55d9;
-    --gold: #e8913a;
-    --border: rgba(0, 0, 0, 0.06);
-    --border-hover: rgba(79, 109, 245, 0.25);
-    --shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
-    --shadow-hover: 0 8px 32px rgba(79, 109, 245, 0.1);
+    --bg-card-hover: #fcfcfd;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --accent: #0f766e;
+    --accent-light: #14b8a6;
+    --accent-dark: #0d5f59;
+    --gold: #b45309;
+    --border: rgba(0, 0, 0, 0.07);
+    --border-hover: rgba(15, 118, 110, 0.3);
+    --shadow: 0 1px 12px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 6px 24px rgba(15, 118, 110, 0.1);
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-serif: 'Playfair Display', Georgia, serif;
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -155,9 +155,8 @@ ul { list-style: none; }
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse 100% 60% at 50% -10%, rgba(79, 109, 245, 0.07), transparent),
-        radial-gradient(ellipse 70% 50% at 85% 70%, rgba(232, 145, 58, 0.05), transparent),
-        radial-gradient(ellipse 50% 40% at 10% 80%, rgba(139, 92, 246, 0.04), transparent);
+        radial-gradient(ellipse 100% 60% at 50% -10%, rgba(15, 118, 110, 0.04), transparent),
+        radial-gradient(ellipse 70% 50% at 85% 70%, rgba(180, 83, 9, 0.03), transparent);
     pointer-events: none;
 }
 
@@ -168,7 +167,7 @@ ul { list-style: none; }
     right: 10%;
     width: 300px;
     height: 300px;
-    border: 1px solid rgba(79, 109, 245, 0.08);
+    border: 1px solid rgba(15, 118, 110, 0.08);
     border-radius: 50%;
     animation: float 20s ease-in-out infinite;
 }
@@ -180,7 +179,7 @@ ul { list-style: none; }
     left: 15%;
     width: 200px;
     height: 200px;
-    border: 1px solid rgba(232, 145, 58, 0.08);
+    border: 1px solid rgba(180, 83, 9, 0.08);
     border-radius: 50%;
     animation: float 15s ease-in-out infinite reverse;
 }
@@ -259,7 +258,7 @@ ul { list-style: none; }
 .btn-primary:hover {
     background: var(--accent-light);
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(79, 109, 245, 0.25);
+    box-shadow: 0 8px 30px rgba(15, 118, 110, 0.25);
 }
 
 .btn-outline {
@@ -448,6 +447,7 @@ ul { list-style: none; }
 .skills {
     padding: 120px 0;
     background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
 }
 
 .skills-grid {
@@ -474,7 +474,7 @@ ul { list-style: none; }
 .skill-icon {
     width: 56px;
     height: 56px;
-    background: rgba(79, 109, 245, 0.08);
+    background: rgba(15, 118, 110, 0.08);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -497,17 +497,17 @@ ul { list-style: none; }
 
 .tag {
     padding: 6px 14px;
-    background: rgba(79, 109, 245, 0.06);
+    background: rgba(15, 118, 110, 0.06);
     color: var(--accent-light);
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 500;
-    border: 1px solid rgba(79, 109, 245, 0.12);
+    border: 1px solid rgba(15, 118, 110, 0.12);
     transition: var(--transition);
 }
 
 .tag:hover {
-    background: rgba(79, 109, 245, 0.12);
+    background: rgba(15, 118, 110, 0.12);
 }
 
 /* ===== Projects Section ===== */
@@ -549,7 +549,7 @@ ul { list-style: none; }
     font-family: var(--font-serif);
     font-size: 2rem;
     font-weight: 700;
-    color: rgba(79, 109, 245, 0.15);
+    color: rgba(15, 118, 110, 0.15);
 }
 
 .project-role {
@@ -557,7 +557,7 @@ ul { list-style: none; }
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--gold);
-    background: rgba(232, 145, 58, 0.08);
+    background: rgba(180, 83, 9, 0.08);
     padding: 4px 12px;
     border-radius: 4px;
     font-weight: 600;
@@ -619,6 +619,7 @@ ul { list-style: none; }
 .experience {
     padding: 120px 0;
     background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
 }
 
 .timeline {
@@ -661,7 +662,7 @@ ul { list-style: none; }
 
 .timeline-item:first-child .timeline-marker {
     background: var(--accent);
-    box-shadow: 0 0 0 4px rgba(79, 109, 245, 0.15);
+    box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.15);
 }
 
 .timeline-content {
@@ -759,6 +760,7 @@ ul { list-style: none; }
 .testimonials {
     padding: 120px 0;
     background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
 }
 
 .testimonials-grid {
@@ -857,7 +859,7 @@ ul { list-style: none; }
     width: 56px;
     height: 56px;
     margin: 0 auto 16px;
-    background: rgba(79, 109, 245, 0.08);
+    background: rgba(15, 118, 110, 0.08);
     border-radius: 12px;
     display: flex;
     align-items: center;
