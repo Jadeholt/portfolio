@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-profile="sdm">
     <!-- Header -->
     <header id="header">
         <div class="header-container">
@@ -28,20 +28,50 @@
         </div>
     </header>
 
+    <!-- Profile Switch -->
+    <div class="profile-switch" id="profileSwitch">
+        <div class="profile-switch-inner">
+            <button class="profile-btn active" data-profile="sdm">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Service Delivery Manager
+            </button>
+            <button class="profile-btn" data-profile="basis">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                SAP Basis Consultant
+            </button>
+        </div>
+    </div>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-bg-pattern"></div>
         <div class="hero-content">
-            <p class="hero-greeting reveal">SAP Platform & Cloud Architect</p>
-            <h1 class="hero-title reveal">
-                <span class="line">Daniel</span>
-                <span class="line highlight">Jadeholt</span>
-            </h1>
-            <p class="hero-description reveal">
-                SAP Platform Architect and Service Delivery Leader with 20+ years of experience
-                in enterprise SAP environments. Specializing in RISE architecture, cloud governance,
-                and operating model design for global organizations.
-            </p>
+            <!-- SDM Hero -->
+            <div class="profile-content" data-show="sdm">
+                <p class="hero-greeting reveal">SAP Service Delivery Manager & Cloud Architect</p>
+                <h1 class="hero-title reveal">
+                    <span class="line">Daniel</span>
+                    <span class="line highlight">Jadeholt</span>
+                </h1>
+                <p class="hero-description reveal">
+                    Experienced SAP Service Delivery Manager with 20+ years in enterprise SAP environments.
+                    I lead cross-functional teams, manage multi-million SEK budgets, and drive governance,
+                    vendor management, and operating model design for global organizations transitioning to SAP RISE.
+                </p>
+            </div>
+            <!-- Basis Hero -->
+            <div class="profile-content" data-show="basis">
+                <p class="hero-greeting reveal">SAP Basis Consultant & Platform Architect</p>
+                <h1 class="hero-title reveal">
+                    <span class="line">Daniel</span>
+                    <span class="line highlight">Jadeholt</span>
+                </h1>
+                <p class="hero-description reveal">
+                    Senior SAP Basis Consultant with 20+ years of hands-on experience across 450+ SAP systems.
+                    Specializing in SAP platform architecture, HANA administration, system migrations, portal technologies,
+                    and RISE technical delivery for enterprise-scale landscapes.
+                </p>
+            </div>
             <div class="hero-buttons reveal">
                 <a href="#projects" class="btn btn-primary">View Projects</a>
                 <a href="#contact" class="btn btn-outline">Get In Touch</a>
@@ -56,22 +86,42 @@
     <!-- Stats Section -->
     <section class="stats">
         <div class="container">
-            <div class="stats-grid">
+            <!-- SDM Stats -->
+            <div class="stats-grid profile-content" data-show="sdm">
                 <div class="stat-card reveal">
                     <span class="stat-number">20+</span>
                     <span class="stat-label">Years Experience</span>
                 </div>
                 <div class="stat-card reveal">
-                    <span class="stat-number">15+</span>
-                    <span class="stat-label">Major Projects</span>
+                    <span class="stat-number">40+</span>
+                    <span class="stat-label">Team Members Managed</span>
+                </div>
+                <div class="stat-card reveal">
+                    <span class="stat-number">x0M</span>
+                    <span class="stat-label">SEK Budget Oversight</span>
                 </div>
                 <div class="stat-card reveal">
                     <span class="stat-number">20+</span>
                     <span class="stat-label">Enterprise Clients</span>
                 </div>
+            </div>
+            <!-- Basis Stats -->
+            <div class="stats-grid profile-content" data-show="basis">
+                <div class="stat-card reveal">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
                 <div class="stat-card reveal">
                     <span class="stat-number">450+</span>
                     <span class="stat-label">SAP Systems Managed</span>
+                </div>
+                <div class="stat-card reveal">
+                    <span class="stat-number">27</span>
+                    <span class="stat-label">Systems in Largest Migration</span>
+                </div>
+                <div class="stat-card reveal">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Major Technical Projects</span>
                 </div>
             </div>
         </div>
@@ -94,26 +144,55 @@
                     </div>
                 </div>
                 <div class="about-text reveal">
-                    <p class="about-intro">
-                        As an SAP Platform / Cloud Architect with service delivery responsibilities,
-                        I specialize in SAP platform architecture, operating model design, and governance
-                        within SAP environments. I ensure well-structured, efficient service execution and
-                        alignment between platform design, SAP services, and operational processes.
-                        Through effective collaboration, clear communication, and strong stakeholder engagement,
-                        I support aligned architectural decisions and well-functioning governance structures
-                        across complex SAP environments.
-                    </p>
-                    <div class="achievements-box">
-                        <h3>Key Achievements</h3>
-                        <ul class="achievements-list">
-                            <li>Led migration and data separation of 27 SAP systems in a major carve-out project at Sandvik</li>
-                            <li>Managed SAP service delivery budgets exceeding tens of millions SEK with 40+ team members</li>
-                            <li>Architected SAP RISE landscapes exceeding x00 million SEK in annual cost</li>
-                            <li>Managed and operated 450+ SAP systems daily at Basis Consulting hosting center</li>
-                            <li>Co-Founder of EEP Capital LLC (US) and EE Padel S.L — entrepreneurial ventures alongside consulting</li>
-                            <li>Developed Target Operating Models for RISE transitions at Sandvik and Epiroc</li>
-                            <li>Member of the Steering Committee for Technology Team at Ernst & Young Sweden</li>
-                        </ul>
+                    <!-- SDM About -->
+                    <div class="profile-content" data-show="sdm">
+                        <p class="about-intro">
+                            As an SAP Service Delivery Manager and Cloud Architect, I lead the strategic planning,
+                            governance, and operational execution of SAP service delivery for global enterprises.
+                            My work sits at the intersection between business and technology — managing vendor relationships
+                            with partners like Capgemini, CGI, and SAP, overseeing multi-million SEK budgets, and ensuring
+                            that service delivery models align with SAP RISE Private Cloud Edition standards and enterprise
+                            architecture principles. I develop Target Operating Models that bridge the gap from project
+                            delivery to steady-state operations, ensuring clear SLA ownership, structured R&R frameworks,
+                            and long-term operational sustainability.
+                        </p>
+                        <div class="achievements-box">
+                            <h3>Key Achievements</h3>
+                            <ul class="achievements-list">
+                                <li>Managed SAP service delivery budgets exceeding tens of millions SEK with 40+ team members at Alleima</li>
+                                <li>Developed Target Operating Models for RISE transitions at Sandvik Coromant and Epiroc</li>
+                                <li>Led architectural and service delivery decisions impacting RISE landscapes exceeding x00 million SEK annually</li>
+                                <li>Member of the Steering Committee for Technology Team at Ernst & Young Sweden</li>
+                                <li>Managed Application Management Service Delivery across Capgemini and CGI partnerships</li>
+                                <li>Strategic planning and governance for SAP landscapes during organizational restructurings at Sandvik</li>
+                                <li>Co-Founder of EEP Capital LLC and EE Padel S.L — entrepreneurial leadership beyond consulting</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Basis About -->
+                    <div class="profile-content" data-show="basis">
+                        <p class="about-intro">
+                            As a Senior SAP Basis Consultant and Platform Architect, I bring deep technical expertise
+                            in SAP system administration, platform architecture, and infrastructure management.
+                            With hands-on experience across 450+ SAP systems, I specialize in SAP HANA operations,
+                            system migrations, portal technologies, SSO/security configurations, and RISE technical
+                            delivery. I operate across the full SAP technology stack — from Web AS JAVA/ABAP and
+                            Web Dispatcher to TREX, Solution Manager, NWDI, and CTS+ transport management.
+                            My work combines deep platform knowledge with architectural insight to ensure technically
+                            sound, supportable, and scalable SAP landscapes.
+                        </p>
+                        <div class="achievements-box">
+                            <h3>Key Achievements</h3>
+                            <ul class="achievements-list">
+                                <li>Managed and operated 450+ SAP systems daily at Basis Consulting hosting center</li>
+                                <li>Led technical migration and data separation of 27 SAP systems in Sandvik carve-out project</li>
+                                <li>Implemented SAP MII on HANA — infrastructure setup, data migration, performance tuning</li>
+                                <li>Architected SAP Cloud Platform PoC with Azure AD integration and principal propagation</li>
+                                <li>Life Cycle Management across 29 SAP systems — hardware, OS/DB upgrades with minimal downtime</li>
+                                <li>SAP Enterprise Portal expertise — upgrades, SSO (SPNego, Kerberos), NWDI, Federation Portal</li>
+                                <li>RISE platform architecture support combining hands-on Basis with architectural decision-making</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -127,24 +206,70 @@
                 <span class="section-tag">What I bring</span>
                 <h2 class="section-title">Skills & Expertise</h2>
             </div>
-            <div class="skills-grid">
+            <!-- SDM Skills -->
+            <div class="skills-grid profile-content" data-show="sdm">
+                <div class="skill-card reveal">
+                    <div class="skill-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Service Delivery Management</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Application Management Services</span>
+                        <span class="tag">SLA & R&R Ownership</span>
+                        <span class="tag">Vendor & Partner Management</span>
+                        <span class="tag">Budget & Cost Optimization</span>
+                        <span class="tag">Team Leadership (40+)</span>
+                        <span class="tag">Stakeholder Communication</span>
+                        <span class="tag">Issue Resolution & Escalation</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>Governance & Strategy</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Target Operating Model Design</span>
+                        <span class="tag">Architectural Governance</span>
+                        <span class="tag">Strategic Planning</span>
+                        <span class="tag">Change Management</span>
+                        <span class="tag">Security & Compliance</span>
+                        <span class="tag">Risk Management</span>
+                        <span class="tag">Documentation & Training</span>
+                    </div>
+                </div>
                 <div class="skill-card reveal">
                     <div class="skill-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
                     </div>
                     <h3>SAP RISE & Cloud</h3>
                     <div class="skill-tags">
-                        <span class="tag">RISE Architecture</span>
                         <span class="tag">RISE Operating Model</span>
-                        <span class="tag">SAP BTP Integration</span>
-                        <span class="tag">Clean Core & Add-on</span>
-                        <span class="tag">Hyperscaler (Azure / AWS)</span>
-                        <span class="tag">RISE Sizing & LCM</span>
                         <span class="tag">RISE Service Delivery</span>
-                        <span class="tag">SAP Cloud Operations</span>
+                        <span class="tag">RISE Customer Success</span>
                         <span class="tag">RISE & Compliance</span>
+                        <span class="tag">SAP ECS Collaboration</span>
+                        <span class="tag">Clean Core Governance</span>
+                        <span class="tag">RISE Sizing & Forecasting</span>
                     </div>
                 </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                    </div>
+                    <h3>Project & Program Management</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Program Delivery Oversight</span>
+                        <span class="tag">Carve-Out & Separation Projects</span>
+                        <span class="tag">Life Cycle Management</span>
+                        <span class="tag">Resource Allocation</span>
+                        <span class="tag">Financial Planning & Forecasting</span>
+                        <span class="tag">Organizational Restructuring</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Basis Skills -->
+            <div class="skills-grid profile-content" data-show="basis">
                 <div class="skill-card reveal">
                     <div class="skill-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
@@ -153,45 +278,57 @@
                     <div class="skill-tags">
                         <span class="tag">SAP WAS JAVA / ABAP</span>
                         <span class="tag">SAP Web Dispatcher</span>
-                        <span class="tag">SAP Enterprise Portal</span>
-                        <span class="tag">SAP HANA</span>
-                        <span class="tag">SAP Solution Manager</span>
-                        <span class="tag">SAP CRM</span>
-                        <span class="tag">SAP BW / BI</span>
                         <span class="tag">SAP TREX</span>
+                        <span class="tag">SAP Solution Manager</span>
+                        <span class="tag">SAP HANA Administration</span>
                         <span class="tag">SAP ECC</span>
+                        <span class="tag">SAP BW / BI</span>
+                        <span class="tag">SAP CRM</span>
                     </div>
                 </div>
                 <div class="skill-card reveal">
                     <div class="skill-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
                     </div>
-                    <h3>Infrastructure & Security</h3>
+                    <h3>SAP Portal & Integration</h3>
                     <div class="skill-tags">
-                        <span class="tag">Azure Active Directory</span>
-                        <span class="tag">SSL / HTTPS</span>
-                        <span class="tag">High Availability</span>
-                        <span class="tag">Load Balancer</span>
-                        <span class="tag">Single Sign-On</span>
-                        <span class="tag">Windows / Linux / Unix</span>
-                        <span class="tag">MS SQL / DB2 / Sybase</span>
-                        <span class="tag">HANA DB</span>
+                        <span class="tag">SAP Enterprise Portal</span>
+                        <span class="tag">SAP Federated Portal</span>
+                        <span class="tag">SAP BTP Integration</span>
+                        <span class="tag">Knowledge Management (KMC)</span>
+                        <span class="tag">Web Page Composer</span>
+                        <span class="tag">Visual Composer</span>
+                        <span class="tag">SAP MII</span>
                     </div>
                 </div>
                 <div class="skill-card reveal">
                     <div class="skill-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
                     </div>
-                    <h3>Leadership & Delivery</h3>
+                    <h3>Infrastructure & Databases</h3>
                     <div class="skill-tags">
-                        <span class="tag">Service Delivery Management</span>
-                        <span class="tag">Vendor & Partner Management</span>
-                        <span class="tag">Budget & Cost Optimization</span>
-                        <span class="tag">Strategic Planning</span>
-                        <span class="tag">Governance & Compliance</span>
-                        <span class="tag">Change Management</span>
-                        <span class="tag">Stakeholder Communication</span>
-                        <span class="tag">Team Leadership (40+)</span>
+                        <span class="tag">SAP HANA DB</span>
+                        <span class="tag">MS SQL / DB2 / Sybase / MAX DB</span>
+                        <span class="tag">Windows / Linux / Unix AIX</span>
+                        <span class="tag">Azure / AWS Hyperscaler</span>
+                        <span class="tag">High Availability</span>
+                        <span class="tag">Load Balancer</span>
+                        <span class="tag">Citrix</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    </div>
+                    <h3>Security & Transport</h3>
+                    <div class="skill-tags">
+                        <span class="tag">SSO (SPNego, Kerberos)</span>
+                        <span class="tag">SSL / HTTPS / X.509</span>
+                        <span class="tag">Azure AD / LDAP / Novell</span>
+                        <span class="tag">ChaRM</span>
+                        <span class="tag">CTS+ / NWDI</span>
+                        <span class="tag">ABAP Transports (TMS)</span>
+                        <span class="tag">SAP IdM</span>
                     </div>
                 </div>
             </div>
@@ -214,54 +351,65 @@
                 <button class="filter-btn" data-filter="project-manager">Project Manager</button>
                 <button class="filter-btn" data-filter="technical-lead">Technical Lead</button>
                 <button class="filter-btn" data-filter="sap-basis">SAP Basis</button>
-                <button class="filter-btn" data-filter="portal">Portal Consultant</button>
+                <button class="filter-btn" data-filter="portal">Portal</button>
             </div>
 
             <div class="projects-grid">
-                <!-- 1. Sandvik Coromant 2025 -->
-                <div class="project-card reveal" data-category="architect service-delivery">
+                <!-- 1. Sandvik Coromant 2025 — SDM focus -->
+                <div class="project-card reveal" data-category="architect service-delivery" data-profile="sdm basis">
                     <div class="project-header">
                         <span class="project-number">01</span>
-                        <span class="project-role">Architect</span>
+                        <span class="project-role profile-content" data-show="sdm">Service Delivery</span>
+                        <span class="project-role profile-content" data-show="basis">Architect</span>
                     </div>
                     <h3 class="project-title">SAP RISE Platform Architecture & Service Delivery</h3>
                     <p class="project-client">Sandvik Coromant — 2025 – Ongoing</p>
                     <ul class="project-highlights">
-                        <li>Definition, governance, and evolution of SAP RISE platform architecture across a complex global landscape</li>
-                        <li>Developed Target Operating Model for smooth handover from project delivery to steady-state operations</li>
-                        <li>Architectural decisions impacting a RISE landscape exceeding x00 million SEK in annual cost</li>
-                        <li>Collaborates with SAP ECS, Customer Success Partners, system integrators, and internal stakeholders</li>
+                        <li class="profile-content" data-show="sdm">Responsible for SAP Service Delivery oversight, SLA ownership, and R&R governance across the RISE landscape</li>
+                        <li class="profile-content" data-show="sdm">Developed Target Operating Model for structured handover from project delivery to steady-state operations</li>
+                        <li class="profile-content" data-show="sdm">Involved in financial planning, cost optimization, and forecasting for RISE landscape exceeding x00M SEK annually</li>
+                        <li class="profile-content" data-show="sdm">Collaborates with SAP ECS, Customer Success Partners, system integrators, and internal stakeholders</li>
+                        <li class="profile-content" data-show="basis">Definition, governance, and evolution of SAP RISE platform architecture across a complex global SAP landscape</li>
+                        <li class="profile-content" data-show="basis">Platform design validation, clean core compliance, and technical design oversight across the RISE landscape</li>
+                        <li class="profile-content" data-show="basis">Sizing considerations and design-driven cost optimization for RISE PCE architecture</li>
+                        <li class="profile-content" data-show="basis">Alignment between platform design, SAP services, and operational processes with SAP ECS</li>
                     </ul>
                     <div class="project-tags">
                         <span>SAP RISE PCE</span>
-                        <span>Clean Core</span>
-                        <span>Target Operating Model</span>
+                        <span class="profile-content" data-show="sdm">Target Operating Model</span>
+                        <span class="profile-content" data-show="sdm">Governance</span>
+                        <span class="profile-content" data-show="basis">Clean Core</span>
+                        <span class="profile-content" data-show="basis">Platform Architecture</span>
                     </div>
                 </div>
 
                 <!-- 2. Epiroc 2024 -->
-                <div class="project-card reveal" data-category="architect sap-basis">
+                <div class="project-card reveal" data-category="architect sap-basis" data-profile="sdm basis">
                     <div class="project-header">
                         <span class="project-number">02</span>
-                        <span class="project-role">Advisor</span>
+                        <span class="project-role profile-content" data-show="sdm">Advisor</span>
+                        <span class="project-role profile-content" data-show="basis">SAP Basis</span>
                     </div>
-                    <h3 class="project-title">SONIC RISE Program — Platform Architecture Support</h3>
+                    <h3 class="project-title">SONIC RISE Program</h3>
                     <p class="project-client">Epiroc AB — 2024 – 2025</p>
                     <ul class="project-highlights">
-                        <li>Primary resource supporting the SONIC RISE program across technical delivery and architectural areas</li>
-                        <li>Combined hands-on SAP Basis with active involvement in architectural discussions and platform decisions</li>
-                        <li>Contributed to Target Operating Model development, clarifying roles and interaction patterns</li>
-                        <li>Ensured alignment with SAP RISE PCE standards and enterprise requirements</li>
+                        <li class="profile-content" data-show="sdm">Contributed to Target Operating Model development, clarifying roles and interaction patterns between SAP, delivery partners, and Epiroc</li>
+                        <li class="profile-content" data-show="sdm">Active involvement in architectural discussions and platform-related decision-making aligned with RISE PCE standards</li>
+                        <li class="profile-content" data-show="sdm">Worked closely with program stakeholders, SAP representatives, and delivery partners on governance alignment</li>
+                        <li class="profile-content" data-show="basis">Primary technical resource supporting SONIC RISE — hands-on SAP Basis and technical support</li>
+                        <li class="profile-content" data-show="basis">Technical coordination, review of solution designs, and alignment between SAP, SIs, and internal IT teams</li>
+                        <li class="profile-content" data-show="basis">Ensured architectural decisions were technically feasible, supportable, and aligned with long-term platform sustainability</li>
                     </ul>
                     <div class="project-tags">
                         <span>SAP RISE</span>
-                        <span>SAP Basis</span>
-                        <span>Operating Model</span>
+                        <span class="profile-content" data-show="sdm">Operating Model</span>
+                        <span class="profile-content" data-show="basis">SAP Basis</span>
+                        <span class="profile-content" data-show="basis">Technical Delivery</span>
                     </div>
                 </div>
 
-                <!-- 3. Alleima Service Delivery -->
-                <div class="project-card reveal" data-category="service-delivery">
+                <!-- 3. Alleima SDM -->
+                <div class="project-card reveal" data-category="service-delivery" data-profile="sdm">
                     <div class="project-header">
                         <span class="project-number">03</span>
                         <span class="project-role">Service Delivery</span>
@@ -271,17 +419,18 @@
                     <ul class="project-highlights">
                         <li>Managed Application Management Service Delivery from Capgemini with CGI as infrastructure supplier</li>
                         <li>Oversees budget of x0 million SEK and manages a team of 40+ employees</li>
-                        <li>Strategic planning, vendor management, security & compliance, and cost optimization</li>
+                        <li>Strategic planning, vendor & partner management, technical oversight, security & compliance</li>
+                        <li>Change management, issue resolution, documentation, training, and cost optimization</li>
                     </ul>
                     <div class="project-tags">
                         <span>AMS</span>
-                        <span>Vendor Management</span>
-                        <span>Budget Oversight</span>
+                        <span>Budget x0M SEK</span>
+                        <span>40+ Team</span>
                     </div>
                 </div>
 
                 <!-- 4. Alleima Technical Lead -->
-                <div class="project-card reveal" data-category="technical-lead">
+                <div class="project-card reveal" data-category="technical-lead" data-profile="sdm basis">
                     <div class="project-header">
                         <span class="project-number">04</span>
                         <span class="project-role">Technical Lead</span>
@@ -289,39 +438,47 @@
                     <h3 class="project-title">SAP Technical Lead — Landscape Strategy</h3>
                     <p class="project-client">Alleima AB — 2020 – 2022</p>
                     <ul class="project-highlights">
-                        <li>Oversee Application Management Service Delivery and collaborate with infrastructure partners</li>
-                        <li>Strategic planning for the SAP landscape ensuring alignment with organizational objectives</li>
-                        <li>System architecture design, security enforcement, and maintenance coordination</li>
+                        <li class="profile-content" data-show="sdm">Oversaw Application Management Service Delivery from Capgemini and infrastructure delivery from CGI</li>
+                        <li class="profile-content" data-show="sdm">Strategic planning for SAP landscape ensuring alignment with organizational objectives</li>
+                        <li class="profile-content" data-show="sdm">Managed vendor relationships, enforced security and compliance, coordinated maintenance</li>
+                        <li class="profile-content" data-show="basis">System architecture design, troubleshooting, and SAP infrastructure optimization</li>
+                        <li class="profile-content" data-show="basis">Security enforcement, compliance oversight, and maintenance coordination across SAP landscape</li>
+                        <li class="profile-content" data-show="basis">Enhanced system efficiency, minimized downtime, and supported cost-effective operations</li>
                     </ul>
                     <div class="project-tags">
                         <span>SAP Landscape</span>
-                        <span>Architecture</span>
+                        <span class="profile-content" data-show="sdm">Vendor Management</span>
+                        <span class="profile-content" data-show="basis">Architecture</span>
                         <span>Operations</span>
                     </div>
                 </div>
 
                 <!-- 5. Sandvik Carve-out -->
-                <div class="project-card reveal" data-category="project-manager">
+                <div class="project-card reveal" data-category="project-manager sap-basis" data-profile="sdm basis">
                     <div class="project-header">
                         <span class="project-number">05</span>
-                        <span class="project-role">Project Manager</span>
+                        <span class="project-role profile-content" data-show="sdm">Project Manager</span>
+                        <span class="project-role profile-content" data-show="basis">Tech PM</span>
                     </div>
                     <h3 class="project-title">Carve-Out Project — 27 SAP Systems</h3>
                     <p class="project-client">Sandvik AB — 2019</p>
                     <ul class="project-highlights">
-                        <li>Spearheaded the migration and data separation of 27 SAP systems</li>
-                        <li>Managed project initiation, planning, execution, and post-implementation support</li>
-                        <li>Requirements analysis, technical solution design, quality assurance, and risk management</li>
+                        <li class="profile-content" data-show="sdm">Spearheaded migration and data separation of 27 SAP systems as Technical Project Manager</li>
+                        <li class="profile-content" data-show="sdm">Managed project teams, resources, stakeholder communication, and risk management</li>
+                        <li class="profile-content" data-show="sdm">Ensured quality, compliance, and successful project outcomes with post-implementation support</li>
+                        <li class="profile-content" data-show="basis">Led technical migration and data separation across 27 SAP systems</li>
+                        <li class="profile-content" data-show="basis">Requirements analysis, technical solution design, and quality assurance</li>
+                        <li class="profile-content" data-show="basis">Project documentation, technical reporting, and post-implementation support</li>
                     </ul>
                     <div class="project-tags">
                         <span>Carve-Out</span>
-                        <span>Migration</span>
+                        <span>27 Systems</span>
                         <span>Data Separation</span>
                     </div>
                 </div>
 
                 <!-- 6. Sandvik Cloud Platform -->
-                <div class="project-card reveal" data-category="architect">
+                <div class="project-card reveal" data-category="architect sap-basis" data-profile="basis">
                     <div class="project-header">
                         <span class="project-number">06</span>
                         <span class="project-role">Technical Consultant</span>
@@ -329,7 +486,7 @@
                     <h3 class="project-title">SAP Cloud Platform PoC & Azure AD Integration</h3>
                     <p class="project-client">Sandvik AB — 2019</p>
                     <ul class="project-highlights">
-                        <li>Led Proof of Concept for SAP Cloud Platform governance and authorization</li>
+                        <li>Led Proof of Concept for SAP Cloud Platform — governance and authorization concept</li>
                         <li>Integration of SAP Cloud Platform with Azure AD through API Management</li>
                         <li>Established trust (principal propagation) between Fiori Launch Pad and SAP Cloud Platform</li>
                     </ul>
@@ -340,8 +497,8 @@
                     </div>
                 </div>
 
-                <!-- 7. Sandvik LCM Project Manager -->
-                <div class="project-card reveal" data-category="project-manager">
+                <!-- 7. Sandvik LCM -->
+                <div class="project-card reveal" data-category="project-manager" data-profile="sdm basis">
                     <div class="project-header">
                         <span class="project-number">07</span>
                         <span class="project-role">Project Manager</span>
@@ -349,9 +506,12 @@
                     <h3 class="project-title">Life Cycle Management — 29 SAP Systems</h3>
                     <p class="project-client">Sandvik AB — 2017 – 2019</p>
                     <ul class="project-highlights">
-                        <li>Managed hardware upgrades, OS and DB enhancements across 29 SAP systems</li>
-                        <li>Minimized business downtime through meticulous planning and Go-Live checks with SAP</li>
-                        <li>Team selection, fallback planning, and successful delivery with minimal disruptions</li>
+                        <li class="profile-content" data-show="sdm">Managed complex Life Cycle project across 29 SAP systems with team selection and resource planning</li>
+                        <li class="profile-content" data-show="sdm">Minimized business downtime through meticulous planning and Go-Live checks with SAP</li>
+                        <li class="profile-content" data-show="sdm">Created fallback plans ensuring successful delivery with minimal disruptions</li>
+                        <li class="profile-content" data-show="basis">Planned hardware upgrades, OS and DB enhancements across 29 SAP systems</li>
+                        <li class="profile-content" data-show="basis">Go-Live verification checks with SAP and robust fallback plan creation</li>
+                        <li class="profile-content" data-show="basis">Successful project delivery with improved system performance and minimal downtime</li>
                     </ul>
                     <div class="project-tags">
                         <span>Life Cycle</span>
@@ -360,8 +520,8 @@
                     </div>
                 </div>
 
-                <!-- 8. Sandvik Business Process Analysis -->
-                <div class="project-card reveal" data-category="project-manager">
+                <!-- 8. Sandvik BPA -->
+                <div class="project-card reveal" data-category="project-manager" data-profile="sdm">
                     <div class="project-header">
                         <span class="project-number">08</span>
                         <span class="project-role">Project Manager</span>
@@ -369,9 +529,9 @@
                     <h3 class="project-title">Business Process Analysis & Organizational Restructuring</h3>
                     <p class="project-client">Sandvik AB — 2017 – 2018</p>
                     <ul class="project-highlights">
-                        <li>Initiated and led business process analysis during centralized-to-decentralized transition</li>
-                        <li>Enhanced work processes within technical teams for improved efficiency and stability</li>
-                        <li>Focus on operational efficiency, availability, and cost-efficiency</li>
+                        <li>Initiated and led business process analysis during Sandvik's centralized-to-decentralized transition</li>
+                        <li>Enhanced work processes within technical teams for improved operational efficiency and stability</li>
+                        <li>Focus on availability, stability, and cost-efficiency across the organization</li>
                     </ul>
                     <div class="project-tags">
                         <span>Process Analysis</span>
@@ -381,7 +541,7 @@
                 </div>
 
                 <!-- 9. Sandvik MII on HANA -->
-                <div class="project-card reveal" data-category="sap-basis">
+                <div class="project-card reveal" data-category="sap-basis" data-profile="basis">
                     <div class="project-header">
                         <span class="project-number">09</span>
                         <span class="project-role">Technical Consultant</span>
@@ -390,7 +550,7 @@
                     <p class="project-client">Sandvik AB — 2017</p>
                     <ul class="project-highlights">
                         <li>Configured SAP Manufacturing Integration and Intelligence (MII) on SAP HANA</li>
-                        <li>Infrastructure setup, data migration, customization, and integration</li>
+                        <li>Infrastructure setup, data migration, customization, and system integration</li>
                         <li>Performance tuning, security configuration, testing, and user training</li>
                     </ul>
                     <div class="project-tags">
@@ -400,38 +560,58 @@
                     </div>
                 </div>
 
-                <!-- 10. Fora AB -->
-                <div class="project-card reveal" data-category="sap-basis">
+                <!-- 10. Sandvik IdM -->
+                <div class="project-card reveal" data-category="sap-basis" data-profile="basis">
                     <div class="project-header">
                         <span class="project-number">10</span>
                         <span class="project-role">Technical Consultant</span>
                     </div>
+                    <h3 class="project-title">Identity Management (IdM) Implementation</h3>
+                    <p class="project-client">Sandvik AB — 2017</p>
+                    <ul class="project-highlights">
+                        <li>Planned all phases: preparation, business blueprinting, realization, GoLive, and support</li>
+                        <li>Advisory insights into Life Cycle Management and governance strategies</li>
+                        <li>Shaped the project's future direction for identity management at Sandvik</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>SAP IdM</span>
+                        <span>Governance</span>
+                        <span>LCM</span>
+                    </div>
+                </div>
+
+                <!-- 11. Fora AB -->
+                <div class="project-card reveal" data-category="sap-basis" data-profile="basis">
+                    <div class="project-header">
+                        <span class="project-number">11</span>
+                        <span class="project-role">SAP Basis</span>
+                    </div>
                     <h3 class="project-title">SAP Basis — CRM, Portal & Life Cycle Planning</h3>
                     <p class="project-client">Fora AB — 2016 – 2017</p>
                     <ul class="project-highlights">
-                        <li>Comprehensive responsibilities for CRM, Portal, NWDI, Proxy, and SAP Web Dispatcher</li>
-                        <li>Migration challenges, troubleshooting, and Landscape Refresh Infrastructure preparation</li>
-                        <li>Strategic planning of Life Cycle Management project with hosting providers and operations</li>
+                        <li>CRM, Portal, NWDI, Proxy, and SAP Web Dispatcher responsibilities</li>
+                        <li>Migration challenges, troubleshooting, sizing and tuning for portal and CRM landscapes</li>
+                        <li>Strategic Life Cycle Management planning with hosting providers and operations staff</li>
                     </ul>
                     <div class="project-tags">
                         <span>CRM</span>
                         <span>Portal</span>
-                        <span>LCM Planning</span>
+                        <span>Web Dispatcher</span>
                     </div>
                 </div>
 
-                <!-- 11. Basis Consulting Hosting -->
-                <div class="project-card reveal" data-category="sap-basis">
+                <!-- 12. Basis Consulting Hosting -->
+                <div class="project-card reveal" data-category="sap-basis" data-profile="basis">
                     <div class="project-header">
-                        <span class="project-number">11</span>
+                        <span class="project-number">12</span>
                         <span class="project-role">SAP Basis</span>
                     </div>
                     <h3 class="project-title">Hosting Center — 450+ SAP Systems</h3>
                     <p class="project-client">Basis Consulting — 2015 – 2016</p>
                     <ul class="project-highlights">
                         <li>Managed and operated 450+ SAP systems daily for multiple enterprise clients</li>
-                        <li>Upgrades, patching, Fiori implementation, Neptune Software, security notes</li>
-                        <li>Tuning, troubleshooting, advisory management, and transport management</li>
+                        <li>Upgrades, installations, patching, Fiori implementation, Neptune Software, security notes</li>
+                        <li>Tuning, troubleshooting, advisory and transport management</li>
                     </ul>
                     <div class="project-tags">
                         <span>Hosting Center</span>
@@ -440,10 +620,10 @@
                     </div>
                 </div>
 
-                <!-- 12. Vinmonopolet -->
-                <div class="project-card reveal" data-category="project-manager">
+                <!-- 13. Vinmonopolet -->
+                <div class="project-card reveal" data-category="project-manager" data-profile="sdm basis">
                     <div class="project-header">
-                        <span class="project-number">12</span>
+                        <span class="project-number">13</span>
                         <span class="project-role">Project Manager</span>
                     </div>
                     <h3 class="project-title">BW, Portal & TREX Migration</h3>
@@ -460,30 +640,56 @@
                     </div>
                 </div>
 
-                <!-- 13. Försäkringskassan -->
-                <div class="project-card reveal" data-category="project-manager portal">
+                <!-- 14. Basis Consulting hosting 2011-2012 -->
+                <div class="project-card reveal" data-category="sap-basis portal" data-profile="basis">
                     <div class="project-header">
-                        <span class="project-number">13</span>
-                        <span class="project-role">Project Manager</span>
+                        <span class="project-number">14</span>
+                        <span class="project-role">SAP Basis</span>
                     </div>
-                    <h3 class="project-title">SAP Enterprise Portal Landscape Upgrade</h3>
-                    <p class="project-client">Försäkringskassan — 2008 – 2009</p>
+                    <h3 class="project-title">Hosting Center — Multi-Client SAP Operations</h3>
+                    <p class="project-client">Basis Consulting — 2011 – 2012</p>
                     <ul class="project-highlights">
-                        <li>Seamless upgrade of SAP EP landscape across 9 systems without production disruption</li>
-                        <li>Installed new production portal with TREX and high-availability architecture</li>
-                        <li>WPC staging environment setup and extensive optimization tuning</li>
+                        <li>Troubleshooting, installations, migrations, system copies, tuning, and configuration</li>
+                        <li>SSO (SPNego, Kerberos), Federation Portal, NWDI, CTS+, client copies</li>
+                        <li>Serving 500+ SIDs across clients: Ekornes, Zalaris, Odfjell, University Oslo</li>
                     </ul>
                     <div class="project-tags">
-                        <span>Enterprise Portal</span>
-                        <span>HA Architecture</span>
-                        <span>9 Systems</span>
+                        <span>500+ SIDs</span>
+                        <span>SSO</span>
+                        <span>NWDI</span>
                     </div>
                 </div>
 
-                <!-- 14. Kongsberg Migration -->
-                <div class="project-card reveal" data-category="portal">
+                <!-- 15. Försäkringskassan -->
+                <div class="project-card reveal" data-category="project-manager portal" data-profile="sdm basis">
                     <div class="project-header">
-                        <span class="project-number">14</span>
+                        <span class="project-number">15</span>
+                        <span class="project-role profile-content" data-show="sdm">Project Manager</span>
+                        <span class="project-role profile-content" data-show="basis">Portal / Basis</span>
+                    </div>
+                    <h3 class="project-title">SAP Enterprise Portal Landscape Upgrade</h3>
+                    <p class="project-client">Försäkringskassan — 2007 – 2009</p>
+                    <ul class="project-highlights">
+                        <li class="profile-content" data-show="sdm">Project managed seamless EP landscape upgrade across 9 systems without production disruption</li>
+                        <li class="profile-content" data-show="sdm">Coordinated with hosting providers, application management, testing, and daily operations</li>
+                        <li class="profile-content" data-show="sdm">Managed Java transport integration with Solution Manager and NWDI, including personnel training</li>
+                        <li class="profile-content" data-show="basis">Installed new production portal integrated with TREX and high-availability architecture</li>
+                        <li class="profile-content" data-show="basis">WPC staging environment setup, TREX configuration, and extensive optimization tuning</li>
+                        <li class="profile-content" data-show="basis">NWDS setup with NWDI transport tools, JAVA transport processes, Business Blueprint activities</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>Enterprise Portal</span>
+                        <span class="profile-content" data-show="basis">HA Architecture</span>
+                        <span class="profile-content" data-show="basis">TREX</span>
+                        <span class="profile-content" data-show="sdm">9 Systems</span>
+                        <span class="profile-content" data-show="sdm">Upgrade</span>
+                    </div>
+                </div>
+
+                <!-- 16. Kongsberg Migration -->
+                <div class="project-card reveal" data-category="portal sap-basis" data-profile="basis">
+                    <div class="project-header">
+                        <span class="project-number">16</span>
                         <span class="project-role">Portal Consultant</span>
                     </div>
                     <h3 class="project-title">Portal Migration EP 6.20 to NW04</h3>
@@ -496,7 +702,27 @@
                     <div class="project-tags">
                         <span>Portal Migration</span>
                         <span>LDAP</span>
-                        <span>NW04</span>
+                        <span>Oracle DB</span>
+                    </div>
+                </div>
+
+                <!-- 17. NMD AS -->
+                <div class="project-card reveal" data-category="sap-basis portal" data-profile="basis">
+                    <div class="project-header">
+                        <span class="project-number">17</span>
+                        <span class="project-role">SAP Basis</span>
+                    </div>
+                    <h3 class="project-title">SAP Enterprise Portal Implementation</h3>
+                    <p class="project-client">NMD AS — 2009 – 2010</p>
+                    <ul class="project-highlights">
+                        <li>Business Blueprint for SAP Enterprise Portal implementation and JAVA transport strategy</li>
+                        <li>Development architecture design integrating with existing German-maintained systems</li>
+                        <li>Created framework for portal: architecture, naming conventions, KMC, CM, and TREX</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>Enterprise Portal</span>
+                        <span>KMC</span>
+                        <span>TREX</span>
                     </div>
                 </div>
             </div>
@@ -515,18 +741,38 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <span class="timeline-date">2022 – Present</span>
-                        <h3>Independent Consultant — SAP Platform / Cloud Architect</h3>
+                        <h3 class="profile-content" data-show="sdm">Independent Consultant — SAP Service Delivery Manager & Cloud Architect</h3>
+                        <h3 class="profile-content" data-show="basis">Independent Consultant — SAP Basis & Platform Architect</h3>
                         <span class="timeline-company">Nelson Invest Sweden</span>
-                        <p>Operating as an independent SAP Platform & Cloud Architect, delivering RISE architecture, operating model design, and governance services for enterprise clients including Sandvik Coromant, Epiroc, and Alleima. Specializing in SAP RISE PCE, BTP integration, clean core compliance, and service delivery management.</p>
+                        <p class="profile-content" data-show="sdm">
+                            Operating as an independent SAP Service Delivery Manager and Cloud Architect. Leading service delivery governance,
+                            Target Operating Model design, vendor management, and financial oversight for enterprise clients including
+                            Sandvik Coromant, Epiroc, and Alleima. Managing budgets, teams, and strategic planning for RISE transitions.
+                        </p>
+                        <p class="profile-content" data-show="basis">
+                            Operating as an independent SAP Basis Consultant and Platform Architect. Delivering hands-on SAP Basis technical support,
+                            RISE platform architecture, clean core compliance, and technical design validation for enterprise clients including
+                            Sandvik Coromant, Epiroc, and Alleima. Combining deep platform knowledge with architectural decision-making.
+                        </p>
                     </div>
                 </div>
                 <div class="timeline-item reveal">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <span class="timeline-date">2020 – 2022</span>
-                        <h3>SAP Basis / Technical Lead</h3>
-                        <span class="timeline-company">Ernst & Young — Steering Committee, Technology Consulting Sweden</span>
-                        <p>Member of the steering committee for the Technology Team in Sweden. Contributing to strategic planning, decision-making, and oversight of technology initiatives. Guiding team direction, optimizing resource allocation, managing risks, and fostering collaboration among key stakeholders.</p>
+                        <h3 class="profile-content" data-show="sdm">SAP Technical Lead — Steering Committee Member</h3>
+                        <h3 class="profile-content" data-show="basis">SAP Basis / Technical Lead</h3>
+                        <span class="timeline-company">Ernst & Young — Technology Consulting Sweden</span>
+                        <p class="profile-content" data-show="sdm">
+                            Member of the steering committee for the Technology Team in Sweden. Contributing to strategic planning,
+                            decision-making, and oversight of technology initiatives. Guiding team direction, facilitating committee meetings,
+                            optimizing resource allocation, managing risks, and fostering collaboration among key stakeholders.
+                        </p>
+                        <p class="profile-content" data-show="basis">
+                            SAP Basis and Technical Lead within the Technology Consulting practice. Hands-on SAP system management
+                            combined with strategic technology planning. Providing insights into emerging technologies and industry trends
+                            while driving technical excellence within the team.
+                        </p>
                     </div>
                 </div>
                 <div class="timeline-item reveal">
@@ -535,16 +781,34 @@
                         <span class="timeline-date">2018 – 2020</span>
                         <h3>Independent Consultant — SAP Basis & Project Manager</h3>
                         <span class="timeline-company">Jadeholt Invest Spain</span>
-                        <p>SAP Basis consulting and project management engagements for Scandinavian enterprise clients including Sandvik AB, delivering cloud platform PoC, carve-out project management, and life cycle management projects.</p>
+                        <p class="profile-content" data-show="sdm">
+                            SAP consulting and project management for Scandinavian enterprise clients including Sandvik AB.
+                            Delivered carve-out project management for 27 SAP systems, cloud platform PoC oversight, and life cycle management projects.
+                        </p>
+                        <p class="profile-content" data-show="basis">
+                            SAP Basis consulting and technical project delivery for Sandvik AB. Led technical execution of carve-out
+                            migration across 27 systems, SAP Cloud Platform PoC with Azure AD integration, and life cycle management
+                            across 29 systems including hardware, OS/DB upgrades.
+                        </p>
                     </div>
                 </div>
                 <div class="timeline-item reveal">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <span class="timeline-date">2008 – 2018</span>
-                        <h3>Technical Consultant / SAP Basis Manager / Lead</h3>
+                        <h3 class="profile-content" data-show="sdm">Technical Consultant / SAP Basis Manager</h3>
+                        <h3 class="profile-content" data-show="basis">Technical Consultant / SAP Basis Lead</h3>
                         <span class="timeline-company">Basis Consulting AS — Oslo, Norway</span>
-                        <p>Oversaw SAP system management, project leadership, and team development across 450+ SAP systems. Led client engagements for organizations including Vinmonopolet, Ekornes, NMD AS, Fora AB, and multiple hosting center clients. Responsible for system availability, technical issue resolution, and SAP infrastructure optimization.</p>
+                        <p class="profile-content" data-show="sdm">
+                            SAP Basis Manager overseeing project leadership, team development, and client engagements. Managed SAP operations
+                            across 450+ systems. Led hosting center operations for enterprise clients including Vinmonopolet, Ekornes, NMD AS,
+                            and Fora AB. Responsible for team mentoring, system availability, and infrastructure optimization.
+                        </p>
+                        <p class="profile-content" data-show="basis">
+                            Senior SAP Basis Consultant managing 450+ SAP systems daily. Hands-on troubleshooting, installations, migrations,
+                            system copies, tuning, SSO (SPNego, Kerberos), Federation Portal, NWDI, CTS+, and configuration across the full
+                            SAP technology stack. Client engagements for Vinmonopolet, Ekornes, NMD AS, Fora AB, and hosting center operations (500+ SIDs).
+                        </p>
                     </div>
                 </div>
                 <div class="timeline-item reveal">
@@ -553,7 +817,14 @@
                         <span class="timeline-date">2006 – 2008</span>
                         <h3>SAP Enterprise Portal Consultant</h3>
                         <span class="timeline-company">Q2d Solutions AB — Lund, Sweden</span>
-                        <p>Application and Technical Consultant with focus on SAP Enterprise Portal. Portal setup, Knowledge Management, Collaboration, TREX integration, and LDAP configuration for various enterprise clients.</p>
+                        <p class="profile-content" data-show="sdm">
+                            Application and Technical Consultant with focus on SAP Enterprise Portal. Client-facing delivery,
+                            portal setup, and Knowledge Management solutions for enterprise clients.
+                        </p>
+                        <p class="profile-content" data-show="basis">
+                            Application and Technical Consultant focused on SAP Enterprise Portal. Portal setup, Knowledge Management,
+                            Collaboration, TREX integration, and LDAP configuration. Setup of internal SAP training systems.
+                        </p>
                     </div>
                 </div>
                 <div class="timeline-item reveal">
@@ -562,7 +833,7 @@
                         <span class="timeline-date">2005 – 2006</span>
                         <h3>2nd Line Support</h3>
                         <span class="timeline-company">Ergo Group — Malmö, Sweden</span>
-                        <p>Maintaining and administrating Active Directory, Novell, and Lotus Notes applications. Foundation role building core IT infrastructure and identity management expertise.</p>
+                        <p>Maintaining and administrating Active Directory, Novell, and Lotus Notes applications. Building core IT infrastructure and identity management expertise.</p>
                     </div>
                 </div>
             </div>

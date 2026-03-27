@@ -70,13 +70,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// ===== Profile switch =====
+const profileButtons = document.querySelectorAll('.profile-btn');
+
+profileButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        profileButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const profile = btn.getAttribute('data-profile');
+        document.body.setAttribute('data-profile', profile);
+
+        // Reset project filter to "All" when switching profile
+        const allFilterBtn = document.querySelector('.filter-btn[data-filter="all"]');
+        if (allFilterBtn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            allFilterBtn.classList.add('active');
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.classList.remove('hidden');
+            });
+        }
+    });
+});
+
 // ===== Project filter =====
 const filterButtons = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
 
 filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-        // Update active button
         filterButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 

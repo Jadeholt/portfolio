@@ -52,6 +52,136 @@ ul { list-style: none; }
     padding: 0 24px;
 }
 
+/* ===== Profile Switch ===== */
+.profile-switch {
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    transition: var(--transition);
+}
+
+#header.scrolled ~ .profile-switch {
+    top: 58px;
+}
+
+.profile-switch-inner {
+    display: flex;
+    gap: 4px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    padding: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    font-family: var(--font-sans);
+    background: transparent;
+    color: var(--text-secondary);
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.profile-btn:hover {
+    color: var(--text-primary);
+}
+
+.profile-btn.active {
+    background: var(--accent);
+    color: #ffffff;
+}
+
+.profile-btn svg {
+    flex-shrink: 0;
+}
+
+/* ===== Profile Content Visibility ===== */
+.profile-content {
+    display: none;
+}
+
+body[data-profile="sdm"] .profile-content[data-show="sdm"] {
+    display: block;
+}
+
+body[data-profile="basis"] .profile-content[data-show="basis"] {
+    display: block;
+}
+
+body[data-profile="sdm"] .profile-content[data-show="sdm"].stats-grid,
+body[data-profile="basis"] .profile-content[data-show="basis"].stats-grid,
+body[data-profile="sdm"] .profile-content[data-show="sdm"].skills-grid,
+body[data-profile="basis"] .profile-content[data-show="basis"].skills-grid {
+    display: grid;
+}
+
+/* Profile-based project visibility */
+body[data-profile="sdm"] .project-card:not([data-profile*="sdm"]) {
+    display: none;
+}
+
+body[data-profile="basis"] .project-card:not([data-profile*="basis"]) {
+    display: none;
+}
+
+/* When a project filter hides a card, it overrides profile */
+.project-card.hidden {
+    display: none !important;
+}
+
+/* Inline profile-content like role badges */
+.project-header .profile-content,
+.project-tags .profile-content,
+.project-highlights .profile-content {
+    display: none;
+}
+
+body[data-profile="sdm"] .project-header .profile-content[data-show="sdm"],
+body[data-profile="sdm"] .project-tags .profile-content[data-show="sdm"],
+body[data-profile="sdm"] .project-highlights .profile-content[data-show="sdm"] {
+    display: list-item;
+}
+
+body[data-profile="basis"] .project-header .profile-content[data-show="basis"],
+body[data-profile="basis"] .project-tags .profile-content[data-show="basis"],
+body[data-profile="basis"] .project-highlights .profile-content[data-show="basis"] {
+    display: list-item;
+}
+
+body[data-profile="sdm"] .project-header .profile-content[data-show="sdm"],
+body[data-profile="basis"] .project-header .profile-content[data-show="basis"] {
+    display: inline-block;
+}
+
+body[data-profile="sdm"] .project-tags .profile-content[data-show="sdm"],
+body[data-profile="basis"] .project-tags .profile-content[data-show="basis"] {
+    display: inline;
+}
+
+/* Timeline h3 and p dual content */
+.timeline-content h3.profile-content,
+.timeline-content p.profile-content {
+    display: none;
+}
+
+body[data-profile="sdm"] .timeline-content h3.profile-content[data-show="sdm"],
+body[data-profile="sdm"] .timeline-content p.profile-content[data-show="sdm"],
+body[data-profile="basis"] .timeline-content h3.profile-content[data-show="basis"],
+body[data-profile="basis"] .timeline-content p.profile-content[data-show="basis"] {
+    display: block;
+}
+
 /* ===== Header ===== */
 #header {
     position: fixed;
@@ -148,7 +278,7 @@ ul { list-style: none; }
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 120px 24px 80px;
+    padding: 140px 24px 80px;
 }
 
 .hero-bg-pattern {
@@ -984,6 +1114,22 @@ ul { list-style: none; }
 }
 
 @media (max-width: 768px) {
+    .profile-switch {
+        top: 64px;
+        width: calc(100% - 32px);
+    }
+
+    .profile-switch-inner {
+        width: 100%;
+    }
+
+    .profile-btn {
+        flex: 1;
+        justify-content: center;
+        padding: 8px 12px;
+        font-size: 0.75rem;
+    }
+
     .mobile-toggle {
         display: flex;
     }
