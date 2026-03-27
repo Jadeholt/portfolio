@@ -1,0 +1,5 @@
+title: Daniel Jadeholt Portfolio
+baseurl: /portfolio
+url: https://jadeholt.github.io
+exclude:
+  - README.md

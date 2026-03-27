@@ -1,0 +1,186 @@
+backend:
+  name: github
+  repo: Jadeholt/portfolio
+  branch: master
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: settings
+    label: "Site Content"
+    files:
+      - name: content
+        label: "All Content"
+        file: "_data/content.yml"
+        fields:
+          # === Personal Info ===
+          - label: Name
+            name: name
+            widget: string
+
+          - label: Email
+            name: email
+            widget: string
+
+          - label: Phone
+            name: phone
+            widget: string
+
+          - label: Location
+            name: location
+            widget: string
+
+          - label: LinkedIn URL
+            name: linkedin
+            widget: string
+
+          # === Hero ===
+          - label: Hero Section
+            name: hero
+            widget: object
+            fields:
+              - label: Service Delivery Manager Profile
+                name: sdm
+                widget: object
+                fields:
+                  - { label: Greeting, name: greeting, widget: string }
+                  - { label: Description, name: description, widget: text }
+              - label: SAP Basis Profile
+                name: basis
+                widget: object
+                fields:
+                  - { label: Greeting, name: greeting, widget: string }
+                  - { label: Description, name: description, widget: text }
+
+          # === Stats ===
+          - label: Stats
+            name: stats
+            widget: object
+            fields:
+              - label: SDM Stats
+                name: sdm
+                widget: list
+                fields:
+                  - { label: Number, name: number, widget: string }
+                  - { label: Label, name: label, widget: string }
+              - label: Basis Stats
+                name: basis
+                widget: list
+                fields:
+                  - { label: Number, name: number, widget: string }
+                  - { label: Label, name: label, widget: string }
+
+          # === About ===
+          - label: About Section
+            name: about
+            widget: object
+            fields:
+              - label: SDM Profile
+                name: sdm
+                widget: object
+                fields:
+                  - { label: Introduction, name: intro, widget: text }
+                  - label: Achievements
+                    name: achievements
+                    widget: list
+                    field: { label: Achievement, name: achievement, widget: string }
+              - label: Basis Profile
+                name: basis
+                widget: object
+                fields:
+                  - { label: Introduction, name: intro, widget: text }
+                  - label: Achievements
+                    name: achievements
+                    widget: list
+                    field: { label: Achievement, name: achievement, widget: string }
+
+          # === Skills ===
+          - label: Skills
+            name: skills
+            widget: object
+            fields:
+              - label: SDM Skills
+                name: sdm
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Icon, name: icon, widget: select, options: [users, layers, cloud, monitor, lock, grid] }
+                  - label: Tags
+                    name: tags
+                    widget: list
+                    field: { label: Tag, name: tag, widget: string }
+              - label: Basis Skills
+                name: basis
+                widget: list
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Icon, name: icon, widget: select, options: [users, layers, cloud, monitor, lock, grid] }
+                  - label: Tags
+                    name: tags
+                    widget: list
+                    field: { label: Tag, name: tag, widget: string }
+
+          # === Projects ===
+          - label: Projects
+            name: projects
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Client, name: client, widget: string }
+              - { label: Period, name: period, widget: string }
+              - { label: "Role (SDM)", name: role_sdm, widget: string, required: false }
+              - { label: "Role (Basis)", name: role_basis, widget: string, required: false }
+              - { label: Categories, name: categories, widget: string, hint: "Space-separated: architect service-delivery project-manager technical-lead sap-basis portal" }
+              - { label: Profiles, name: profiles, widget: string, hint: "Space-separated: sdm basis" }
+              - label: "Highlights (SDM)"
+                name: highlights_sdm
+                widget: list
+                required: false
+                field: { label: Highlight, name: highlight, widget: string }
+              - label: "Highlights (Basis)"
+                name: highlights_basis
+                widget: list
+                required: false
+                field: { label: Highlight, name: highlight, widget: string }
+              - label: "Tags (SDM)"
+                name: tags_sdm
+                widget: list
+                required: false
+                field: { label: Tag, name: tag, widget: string }
+              - label: "Tags (Basis)"
+                name: tags_basis
+                widget: list
+                required: false
+                field: { label: Tag, name: tag, widget: string }
+
+          # === Experience ===
+          - label: Work Experience
+            name: experience
+            widget: list
+            fields:
+              - { label: Period, name: period, widget: string }
+              - { label: "Title (SDM)", name: title_sdm, widget: string }
+              - { label: "Title (Basis)", name: title_basis, widget: string }
+              - { label: Company, name: company, widget: string }
+              - { label: "Description (SDM)", name: description_sdm, widget: text }
+              - { label: "Description (Basis)", name: description_basis, widget: text }
+
+          # === Education ===
+          - label: Education
+            name: education
+            widget: list
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Subtitle, name: subtitle, widget: string }
+
+          # === Ventures ===
+          - label: Ventures
+            name: ventures
+            widget: list
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Role, name: role, widget: string }
+              - { label: Location, name: location, widget: string }
+              - { label: URL, name: url, widget: string, required: false }

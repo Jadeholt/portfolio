@@ -1,0 +1,653 @@
+# ===== Personal =====
+name: Daniel Jadeholt
+email: Daniel.jadeholt@gmail.com
+phone: "+46 709 798 049"
+location: Sweden
+linkedin: https://www.linkedin.com/in/danieljadeholt
+
+# ===== Hero =====
+hero:
+  sdm:
+    greeting: SAP Service Delivery Manager & Cloud Architect
+    description: >-
+      Experienced SAP Service Delivery Manager with 20+ years in enterprise SAP environments.
+      I lead cross-functional teams, manage multi-million SEK budgets, and drive governance,
+      vendor management, and operating model design for global organizations transitioning to SAP RISE.
+  basis:
+    greeting: SAP Basis Consultant & Platform Architect
+    description: >-
+      Senior SAP Basis Consultant with 20+ years of hands-on experience across 450+ SAP systems.
+      Specializing in SAP platform architecture, HANA administration, system migrations, portal technologies,
+      and RISE technical delivery for enterprise-scale landscapes.
+
+# ===== Stats =====
+stats:
+  sdm:
+    - number: "20+"
+      label: Years Experience
+    - number: "40+"
+      label: Team Members Managed
+    - number: X00M
+      label: SEK Budget Oversight
+    - number: "20+"
+      label: Enterprise Clients
+  basis:
+    - number: "20+"
+      label: Years Experience
+    - number: "450+"
+      label: SAP Systems Managed
+    - number: "27"
+      label: Systems in Largest Migration
+    - number: "15+"
+      label: Major Technical Projects
+
+# ===== About =====
+about:
+  sdm:
+    intro: >-
+      As an SAP Service Delivery Manager and Cloud Architect, I lead the strategic planning,
+      governance, and operational execution of SAP service delivery for global enterprises.
+      My work sits at the intersection between business and technology — managing vendor relationships
+      with partners like Capgemini, CGI, and SAP, overseeing multi-million SEK budgets, and ensuring
+      that service delivery models align with SAP RISE Private Cloud Edition standards and enterprise
+      architecture principles. I develop Target Operating Models that bridge the gap from project
+      delivery to steady-state operations, ensuring clear SLA ownership, structured R&R frameworks,
+      and long-term operational sustainability.
+    achievements:
+      - Managed SAP service delivery budgets exceeding tens of millions SEK with 40+ team members at Alleima
+      - Developed Target Operating Models for RISE transitions at Sandvik Coromant and Epiroc
+      - Led architectural and service delivery decisions impacting RISE landscapes exceeding x00 million SEK annually
+      - Member of the Steering Committee for Technology Team at Ernst & Young Sweden
+      - Managed Application Management Service Delivery across Capgemini and CGI partnerships
+      - Strategic planning and governance for SAP landscapes during organizational restructurings at Sandvik
+      - "Co-Founder of EEP Capital LLC and EE Padel S.L — entrepreneurial leadership beyond consulting"
+  basis:
+    intro: >-
+      As a Senior SAP Basis Consultant and Platform Architect, I bring deep technical expertise
+      in SAP system administration, platform architecture, and infrastructure management.
+      With hands-on experience across 450+ SAP systems, I specialize in SAP HANA operations,
+      system migrations, portal technologies, SSO/security configurations, and RISE technical
+      delivery. I operate across the full SAP technology stack — from Web AS JAVA/ABAP and
+      Web Dispatcher to TREX, Solution Manager, NWDI, and CTS+ transport management.
+      My work combines deep platform knowledge with architectural insight to ensure technically
+      sound, supportable, and scalable SAP landscapes.
+    achievements:
+      - Managed and operated 450+ SAP systems daily at Basis Consulting hosting center
+      - Led technical migration and data separation of 27 SAP systems in Sandvik carve-out project
+      - "Implemented SAP MII on HANA — infrastructure setup, data migration, performance tuning"
+      - Architected SAP Cloud Platform PoC with Azure AD integration and principal propagation
+      - "Life Cycle Management across 29 SAP systems — hardware, OS/DB upgrades with minimal downtime"
+      - "SAP Enterprise Portal expertise — upgrades, SSO (SPNego, Kerberos), NWDI, Federation Portal"
+      - RISE platform architecture support combining hands-on Basis with architectural decision-making
+
+# ===== Skills =====
+skills:
+  sdm:
+    - title: Service Delivery Management
+      icon: users
+      tags:
+        - Application Management Services
+        - SLA & R&R Ownership
+        - Vendor & Partner Management
+        - Budget & Cost Optimization
+        - Team Leadership (40+)
+        - Stakeholder Communication
+        - Issue Resolution & Escalation
+    - title: Governance & Strategy
+      icon: layers
+      tags:
+        - Target Operating Model Design
+        - Architectural Governance
+        - Strategic Planning
+        - Change Management
+        - Security & Compliance
+        - Risk Management
+        - Documentation & Training
+    - title: SAP RISE & Cloud
+      icon: cloud
+      tags:
+        - RISE Operating Model
+        - RISE Service Delivery
+        - RISE Customer Success
+        - RISE & Compliance
+        - SAP ECS Collaboration
+        - Clean Core Governance
+        - RISE Sizing & Forecasting
+    - title: Project & Program Management
+      icon: grid
+      tags:
+        - Program Delivery Oversight
+        - Carve-Out & Separation Projects
+        - Life Cycle Management
+        - Resource Allocation
+        - Financial Planning & Forecasting
+        - Organizational Restructuring
+  basis:
+    - title: SAP Platform & Basis
+      icon: monitor
+      tags:
+        - SAP WAS JAVA / ABAP
+        - SAP Web Dispatcher
+        - SAP TREX
+        - SAP Solution Manager
+        - SAP HANA Administration
+        - SAP ECC
+        - SAP BW / BI
+        - SAP CRM
+    - title: SAP Portal & Integration
+      icon: layers
+      tags:
+        - SAP Enterprise Portal
+        - SAP Federated Portal
+        - SAP BTP Integration
+        - Knowledge Management (KMC)
+        - Web Page Composer
+        - Visual Composer
+        - SAP MII
+    - title: Infrastructure & Databases
+      icon: cloud
+      tags:
+        - SAP HANA DB
+        - MS SQL / DB2 / Sybase / MAX DB
+        - Windows / Linux / Unix AIX
+        - Azure / AWS Hyperscaler
+        - High Availability
+        - Load Balancer
+        - Citrix
+    - title: Security & Transport
+      icon: lock
+      tags:
+        - SSO (SPNego, Kerberos)
+        - SSL / HTTPS / X.509
+        - Azure AD / LDAP / Novell
+        - ChaRM
+        - CTS+ / NWDI
+        - ABAP Transports (TMS)
+        - SAP IdM
+
+# ===== Projects =====
+projects:
+  - title: SAP RISE Platform Architecture & Service Delivery
+    client: Sandvik Coromant
+    period: 2025 – Ongoing
+    role_sdm: Service Delivery
+    role_basis: Architect
+    categories: architect service-delivery
+    profiles: sdm basis
+    highlights_sdm:
+      - Responsible for SAP Service Delivery oversight, SLA ownership, and R&R governance across the RISE landscape
+      - Developed Target Operating Model for structured handover from project delivery to steady-state operations
+      - Involved in financial planning, cost optimization, and forecasting for RISE landscape exceeding x00M SEK annually
+      - Collaborates with SAP ECS, Customer Success Partners, system integrators, and internal stakeholders
+    highlights_basis:
+      - Definition, governance, and evolution of SAP RISE platform architecture across a complex global SAP landscape
+      - Platform design validation, clean core compliance, and technical design oversight across the RISE landscape
+      - Sizing considerations and design-driven cost optimization for RISE PCE architecture
+      - Alignment between platform design, SAP services, and operational processes with SAP ECS
+    tags_sdm:
+      - SAP RISE PCE
+      - Target Operating Model
+      - Governance
+    tags_basis:
+      - SAP RISE PCE
+      - Clean Core
+      - Platform Architecture
+
+  - title: SONIC RISE Program
+    client: Epiroc AB
+    period: 2024 – 2025
+    role_sdm: Advisor
+    role_basis: SAP Basis
+    categories: architect sap-basis
+    profiles: sdm basis
+    highlights_sdm:
+      - Contributed to Target Operating Model development, clarifying roles and interaction patterns between SAP, delivery partners, and Epiroc
+      - Active involvement in architectural discussions and platform-related decision-making aligned with RISE PCE standards
+      - Worked closely with program stakeholders, SAP representatives, and delivery partners on governance alignment
+    highlights_basis:
+      - "Primary technical resource supporting SONIC RISE — hands-on SAP Basis and technical support"
+      - Technical coordination, review of solution designs, and alignment between SAP, SIs, and internal IT teams
+      - Ensured architectural decisions were technically feasible, supportable, and aligned with long-term platform sustainability
+    tags_sdm:
+      - SAP RISE
+      - Operating Model
+    tags_basis:
+      - SAP RISE
+      - SAP Basis
+      - Technical Delivery
+
+  - title: SAP Application Management Service Delivery
+    client: Alleima AB
+    period: 2023 – 2025
+    role_sdm: Service Delivery
+    role_basis: ""
+    categories: service-delivery
+    profiles: sdm
+    highlights_sdm:
+      - Managed Application Management Service Delivery from Capgemini with CGI as infrastructure supplier
+      - Oversees budget of x0 million SEK and manages a team of 40+ employees
+      - Strategic planning, vendor & partner management, technical oversight, security & compliance
+      - Change management, issue resolution, documentation, training, and cost optimization
+    highlights_basis: []
+    tags_sdm:
+      - AMS
+      - Budget x0M SEK
+      - 40+ Team
+    tags_basis: []
+
+  - title: "SAP Technical Lead — Landscape Strategy"
+    client: Alleima AB
+    period: 2020 – 2022
+    role_sdm: Technical Lead
+    role_basis: Technical Lead
+    categories: technical-lead
+    profiles: sdm basis
+    highlights_sdm:
+      - Oversaw Application Management Service Delivery from Capgemini and infrastructure delivery from CGI
+      - Strategic planning for SAP landscape ensuring alignment with organizational objectives
+      - Managed vendor relationships, enforced security and compliance, coordinated maintenance
+    highlights_basis:
+      - System architecture design, troubleshooting, and SAP infrastructure optimization
+      - Security enforcement, compliance oversight, and maintenance coordination across SAP landscape
+      - Enhanced system efficiency, minimized downtime, and supported cost-effective operations
+    tags_sdm:
+      - SAP Landscape
+      - Vendor Management
+      - Operations
+    tags_basis:
+      - SAP Landscape
+      - Architecture
+      - Operations
+
+  - title: "Carve-Out Project — 27 SAP Systems"
+    client: Sandvik AB
+    period: "2019"
+    role_sdm: Project Manager
+    role_basis: Tech PM
+    categories: project-manager sap-basis
+    profiles: sdm basis
+    highlights_sdm:
+      - Spearheaded migration and data separation of 27 SAP systems as Technical Project Manager
+      - Managed project teams, resources, stakeholder communication, and risk management
+      - Ensured quality, compliance, and successful project outcomes with post-implementation support
+    highlights_basis:
+      - Led technical migration and data separation across 27 SAP systems
+      - Requirements analysis, technical solution design, and quality assurance
+      - Project documentation, technical reporting, and post-implementation support
+    tags_sdm:
+      - Carve-Out
+      - 27 Systems
+      - Data Separation
+    tags_basis:
+      - Carve-Out
+      - 27 Systems
+      - Data Separation
+
+  - title: SAP Cloud Platform PoC & Azure AD Integration
+    client: Sandvik AB
+    period: "2019"
+    role_sdm: ""
+    role_basis: Technical Consultant
+    categories: architect sap-basis
+    profiles: basis
+    highlights_sdm: []
+    highlights_basis:
+      - "Led Proof of Concept for SAP Cloud Platform — governance and authorization concept"
+      - Integration of SAP Cloud Platform with Azure AD through API Management
+      - Established trust (principal propagation) between Fiori Launch Pad and SAP Cloud Platform
+    tags_sdm: []
+    tags_basis:
+      - SAP Cloud Platform
+      - Azure AD
+      - Fiori
+
+  - title: "Life Cycle Management — 29 SAP Systems"
+    client: Sandvik AB
+    period: 2017 – 2019
+    role_sdm: Project Manager
+    role_basis: Project Manager
+    categories: project-manager
+    profiles: sdm basis
+    highlights_sdm:
+      - Managed complex Life Cycle project across 29 SAP systems with team selection and resource planning
+      - Minimized business downtime through meticulous planning and Go-Live checks with SAP
+      - Created fallback plans ensuring successful delivery with minimal disruptions
+    highlights_basis:
+      - Planned hardware upgrades, OS and DB enhancements across 29 SAP systems
+      - Go-Live verification checks with SAP and robust fallback plan creation
+      - Successful project delivery with improved system performance and minimal downtime
+    tags_sdm:
+      - Life Cycle
+      - OS/DB Upgrade
+      - 29 Systems
+    tags_basis:
+      - Life Cycle
+      - OS/DB Upgrade
+      - 29 Systems
+
+  - title: Business Process Analysis & Organizational Restructuring
+    client: Sandvik AB
+    period: 2017 – 2018
+    role_sdm: Project Manager
+    role_basis: ""
+    categories: project-manager
+    profiles: sdm
+    highlights_sdm:
+      - "Initiated and led business process analysis during Sandvik's centralized-to-decentralized transition"
+      - Enhanced work processes within technical teams for improved operational efficiency and stability
+      - Focus on availability, stability, and cost-efficiency across the organization
+    highlights_basis: []
+    tags_sdm:
+      - Process Analysis
+      - Restructuring
+      - Efficiency
+    tags_basis: []
+
+  - title: SAP MII on HANA Implementation
+    client: Sandvik AB
+    period: "2017"
+    role_sdm: ""
+    role_basis: Technical Consultant
+    categories: sap-basis
+    profiles: basis
+    highlights_sdm: []
+    highlights_basis:
+      - Configured SAP Manufacturing Integration and Intelligence (MII) on SAP HANA
+      - Infrastructure setup, data migration, customization, and system integration
+      - Performance tuning, security configuration, testing, and user training
+    tags_sdm: []
+    tags_basis:
+      - SAP MII
+      - HANA
+      - Manufacturing
+
+  - title: Identity Management (IdM) Implementation
+    client: Sandvik AB
+    period: "2017"
+    role_sdm: ""
+    role_basis: Technical Consultant
+    categories: sap-basis
+    profiles: basis
+    highlights_sdm: []
+    highlights_basis:
+      - "Planned all phases: preparation, business blueprinting, realization, GoLive, and support"
+      - Advisory insights into Life Cycle Management and governance strategies
+      - "Shaped the project's future direction for identity management at Sandvik"
+    tags_sdm: []
+    tags_basis:
+      - SAP IdM
+      - Governance
+      - LCM
+
+  - title: "SAP Basis — CRM, Portal & Life Cycle Planning"
+    client: Fora AB
+    period: 2016 – 2017
+    role_sdm: ""
+    role_basis: SAP Basis
+    categories: sap-basis
+    profiles: basis
+    highlights_sdm: []
+    highlights_basis:
+      - CRM, Portal, NWDI, Proxy, and SAP Web Dispatcher responsibilities
+      - Migration challenges, troubleshooting, sizing and tuning for portal and CRM landscapes
+      - Strategic Life Cycle Management planning with hosting providers and operations staff
+    tags_sdm: []
+    tags_basis:
+      - CRM
+      - Portal
+      - Web Dispatcher
+
+  - title: "Hosting Center — 450+ SAP Systems"
+    client: Basis Consulting
+    period: 2015 – 2016
+    role_sdm: ""
+    role_basis: SAP Basis
+    categories: sap-basis
+    profiles: basis
+    highlights_sdm: []
+    highlights_basis:
+      - Managed and operated 450+ SAP systems daily for multiple enterprise clients
+      - Upgrades, installations, patching, Fiori implementation, Neptune Software, security notes
+      - Tuning, troubleshooting, advisory and transport management
+    tags_sdm: []
+    tags_basis:
+      - Hosting Center
+      - 450+ Systems
+      - Fiori
+
+  - title: BW, Portal & TREX Migration
+    client: Vinmonopolet AS
+    period: "2014"
+    role_sdm: Project Manager
+    role_basis: Project Manager
+    categories: project-manager
+    profiles: sdm basis
+    highlights_sdm:
+      - Led migration project encompassing BW, Enterprise Portal, and TREX systems
+      - Hardware planning, OS/DB upgrades, server sizing, and compatibility checks
+      - GoLive verification with SAP and robust fallback plan establishment
+    highlights_basis:
+      - Led migration project encompassing BW, Enterprise Portal, and TREX systems
+      - Hardware planning, OS/DB upgrades, server sizing, and compatibility checks
+      - GoLive verification with SAP and robust fallback plan establishment
+    tags_sdm:
+      - Migration
+      - BW
+      - Enterprise Portal
+    tags_basis:
+      - Migration
+      - BW
+      - Enterprise Portal
+
+  - title: "Hosting Center — Multi-Client SAP Operations"
+    client: Basis Consulting
+    period: 2011 – 2012
+    role_sdm: ""
+    role_basis: SAP Basis
+    categories: sap-basis portal
+    profiles: basis
+    highlights_sdm: []
+    highlights_basis:
+      - Troubleshooting, installations, migrations, system copies, tuning, and configuration
+      - SSO (SPNego, Kerberos), Federation Portal, NWDI, CTS+, client copies
+      - "Serving 500+ SIDs across clients: Ekornes, Zalaris, Odfjell, University Oslo"
+    tags_sdm: []
+    tags_basis:
+      - 500+ SIDs
+      - SSO
+      - NWDI
+
+  - title: SAP Enterprise Portal Landscape Upgrade
+    client: "Försäkringskassan"
+    period: 2007 – 2009
+    role_sdm: Project Manager
+    role_basis: Portal / Basis
+    categories: project-manager portal
+    profiles: sdm basis
+    highlights_sdm:
+      - Project managed seamless EP landscape upgrade across 9 systems without production disruption
+      - Coordinated with hosting providers, application management, testing, and daily operations
+      - Managed Java transport integration with Solution Manager and NWDI, including personnel training
+    highlights_basis:
+      - Installed new production portal integrated with TREX and high-availability architecture
+      - WPC staging environment setup, TREX configuration, and extensive optimization tuning
+      - NWDS setup with NWDI transport tools, JAVA transport processes, Business Blueprint activities
+    tags_sdm:
+      - Enterprise Portal
+      - 9 Systems
+      - Upgrade
+    tags_basis:
+      - Enterprise Portal
+      - HA Architecture
+      - TREX
+
+  - title: Portal Migration EP 6.20 to NW04
+    client: Kongsberg Automotive
+    period: "2006"
+    role_sdm: ""
+    role_basis: Portal Consultant
+    categories: portal sap-basis
+    profiles: basis
+    highlights_sdm: []
+    highlights_basis:
+      - Technical consultant and coordinator for internal portal migration project
+      - Data migration, portal configuration, LDAP connections and modifications
+      - TREX setup, reimplementation of customized solutions and testing
+    tags_sdm: []
+    tags_basis:
+      - Portal Migration
+      - LDAP
+      - Oracle DB
+
+  - title: SAP Enterprise Portal Implementation
+    client: NMD AS
+    period: 2009 – 2010
+    role_sdm: ""
+    role_basis: SAP Basis
+    categories: sap-basis portal
+    profiles: basis
+    highlights_sdm: []
+    highlights_basis:
+      - Business Blueprint for SAP Enterprise Portal implementation and JAVA transport strategy
+      - Development architecture design integrating with existing German-maintained systems
+      - "Created framework for portal: architecture, naming conventions, KMC, CM, and TREX"
+    tags_sdm: []
+    tags_basis:
+      - Enterprise Portal
+      - KMC
+      - TREX
+
+# ===== Experience =====
+experience:
+  - period: 2022 – Present
+    title_sdm: "Independent Consultant — SAP Service Delivery Manager & Cloud Architect"
+    title_basis: "Independent Consultant — SAP Basis & Platform Architect"
+    company: Nelson Invest Sweden
+    description_sdm: >-
+      Operating as an independent SAP Service Delivery Manager and Cloud Architect. Leading service delivery governance,
+      Target Operating Model design, vendor management, and financial oversight for enterprise clients including
+      Sandvik Coromant, Epiroc, and Alleima. Managing budgets, teams, and strategic planning for RISE transitions.
+    description_basis: >-
+      Operating as an independent SAP Basis Consultant and Platform Architect. Delivering hands-on SAP Basis technical support,
+      RISE platform architecture, clean core compliance, and technical design validation for enterprise clients including
+      Sandvik Coromant, Epiroc, and Alleima. Combining deep platform knowledge with architectural decision-making.
+
+  - period: 2020 – 2022
+    title_sdm: "SAP Technical Lead — Steering Committee Member"
+    title_basis: SAP Basis / Technical Lead
+    company: "Ernst & Young — Technology Consulting Sweden"
+    description_sdm: >-
+      Member of the steering committee for the Technology Team in Sweden. Contributing to strategic planning,
+      decision-making, and oversight of technology initiatives. Guiding team direction, facilitating committee meetings,
+      optimizing resource allocation, managing risks, and fostering collaboration among key stakeholders.
+    description_basis: >-
+      SAP Basis and Technical Lead within the Technology Consulting practice. Hands-on SAP system management
+      combined with strategic technology planning. Providing insights into emerging technologies and industry trends
+      while driving technical excellence within the team.
+
+  - period: 2018 – 2020
+    title_sdm: "Independent Consultant — SAP Basis & Project Manager"
+    title_basis: "Independent Consultant — SAP Basis & Project Manager"
+    company: Jadeholt Invest Spain
+    description_sdm: >-
+      SAP consulting and project management for Scandinavian enterprise clients including Sandvik AB.
+      Delivered carve-out project management for 27 SAP systems, cloud platform PoC oversight, and life cycle management projects.
+    description_basis: >-
+      SAP Basis consulting and technical project delivery for Sandvik AB. Led technical execution of carve-out
+      migration across 27 systems, SAP Cloud Platform PoC with Azure AD integration, and life cycle management
+      across 29 systems including hardware, OS/DB upgrades.
+
+  - period: 2008 – 2018
+    title_sdm: Technical Consultant / SAP Basis Manager
+    title_basis: Technical Consultant / SAP Basis Lead
+    company: "Basis Consulting AS — Oslo, Norway"
+    description_sdm: >-
+      SAP Basis Manager overseeing project leadership, team development, and client engagements. Managed SAP operations
+      across 450+ systems. Led hosting center operations for enterprise clients including Vinmonopolet, Ekornes, NMD AS,
+      and Fora AB. Responsible for team mentoring, system availability, and infrastructure optimization.
+    description_basis: >-
+      Senior SAP Basis Consultant managing 450+ SAP systems daily. Hands-on troubleshooting, installations, migrations,
+      system copies, tuning, SSO (SPNego, Kerberos), Federation Portal, NWDI, CTS+, and configuration across the full
+      SAP technology stack. Client engagements for Vinmonopolet, Ekornes, NMD AS, Fora AB, and hosting center operations (500+ SIDs).
+
+  - period: 2006 – 2008
+    title_sdm: SAP Enterprise Portal Consultant
+    title_basis: SAP Enterprise Portal Consultant
+    company: "Q2d Solutions AB — Lund, Sweden"
+    description_sdm: >-
+      Application and Technical Consultant with focus on SAP Enterprise Portal. Client-facing delivery,
+      portal setup, and Knowledge Management solutions for enterprise clients.
+    description_basis: >-
+      Application and Technical Consultant focused on SAP Enterprise Portal. Portal setup, Knowledge Management,
+      Collaboration, TREX integration, and LDAP configuration. Setup of internal SAP training systems.
+
+  - period: 2005 – 2006
+    title_sdm: 2nd Line Support
+    title_basis: 2nd Line Support
+    company: "Ergo Group — Malmö, Sweden"
+    description_sdm: >-
+      Maintaining and administrating Active Directory, Novell, and Lotus Notes applications.
+      Building core IT infrastructure and identity management expertise.
+    description_basis: >-
+      Maintaining and administrating Active Directory, Novell, and Lotus Notes applications.
+      Building core IT infrastructure and identity management expertise.
+
+# ===== Education =====
+education:
+  - title: Bachelor in Computer Science
+    subtitle: University Degree
+  - title: Leadership Training
+    subtitle: Swedish Marine, Karlskrona
+  - title: SAP Training Portfolio
+    subtitle: "HANA, Solution Manager, EP, Web AS, OS/DB Migration"
+  - title: Languages
+    subtitle: Swedish (native) & English (fluent)
+
+# ===== Ventures =====
+ventures:
+  - name: EEP Capital LLC
+    description: >-
+      Co-Founder (2022). US-based investment company in the padel sports industry.
+      Featured in Dagens Industri, Sports Business Journal, and Breakit.
+    role: Co-Founder
+    location: United States — 2022
+    url: ""
+
+  - name: EE Padel S.L
+    description: >-
+      Co-Founder (2020). Padel sports venture based in Spain, building and operating padel facilities.
+    role: Co-Founder
+    location: Spain — 2020
+    url: https://www.eepadel.com
+
+  - name: Eljoi
+    description: >-
+      Swedish-speaking electricity provider in Spain offering 100% renewable energy
+      at competitive prices. Services include electricity contracts, solar panel installation,
+      and energy storage solutions for Swedish expatriates in Spain.
+    role: Founder
+    location: Spain
+    url: https://www.eljoi.com
+
+  - name: Bodyweight Diet
+    description: >-
+      Co-Owner (2025). Health and wellness venture focused on bodyweight training and dietary guidance.
+    role: Co-Owner
+    location: Sweden — 2025
+    url: https://www.bodyweight.diet
+
+  - name: AllStars Spain
+    description: >-
+      Gym and training center in Torrevieja, Spain. Offering fitness, MMA, boxing, Thai boxing,
+      wrestling, BJJ, and functional training.
+    role: Co-Founder
+    location: Spain
+    url: https://www.allstarsspain.com
+
+  - name: Nelson Invest Sweden
+    description: >-
+      Independent consulting firm (2022). Vehicle for delivering SAP architecture and service delivery
+      consulting to enterprise clients across Scandinavia.
+    role: Founder
+    location: Sweden — 2022
+    url: ""
