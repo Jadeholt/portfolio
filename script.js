@@ -13,7 +13,6 @@ mobileToggle.addEventListener('click', () => {
     mobileToggle.classList.toggle('active');
 });
 
-// Close mobile menu on link click
 navbar.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
         navbar.classList.remove('open');
@@ -43,9 +42,8 @@ window.addEventListener('scroll', updateActiveNav);
 const revealElements = document.querySelectorAll('.reveal');
 
 const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
+    entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            // Stagger animation for sibling elements
             const siblings = entry.target.parentElement.querySelectorAll('.reveal');
             let delay = 0;
             siblings.forEach((sib, i) => {
@@ -69,5 +67,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         if (target) {
             target.scrollIntoView({ behavior: 'smooth' });
         }
+    });
+});
+
+// ===== Project filter =====
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Update active button
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+            if (filter === 'all') {
+                card.classList.remove('hidden');
+            } else {
+                const categories = card.getAttribute('data-category') || '';
+                if (categories.includes(filter)) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            }
+        });
     });
 });
