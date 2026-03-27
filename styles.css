@@ -1,20 +1,20 @@
 /* ===== CSS Variables & Reset ===== */
 :root {
-    --bg-primary: #0a0f1a;
-    --bg-secondary: #111827;
-    --bg-card: #1a2235;
-    --bg-card-hover: #1f2a40;
-    --text-primary: #f1f5f9;
-    --text-secondary: #94a3b8;
-    --text-muted: #64748b;
-    --accent: #10b981;
-    --accent-light: #34d399;
-    --accent-dark: #059669;
-    --gold: #f59e0b;
-    --border: rgba(148, 163, 184, 0.1);
-    --border-hover: rgba(16, 185, 129, 0.3);
-    --shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-    --shadow-hover: 0 8px 40px rgba(16, 185, 129, 0.15);
+    --bg-primary: #fafbfc;
+    --bg-secondary: #f0f2f5;
+    --bg-card: #ffffff;
+    --bg-card-hover: #f8f9fb;
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --text-muted: #a0aec0;
+    --accent: #2b6cb0;
+    --accent-light: #3182ce;
+    --accent-dark: #1a4971;
+    --gold: #d97706;
+    --border: rgba(0, 0, 0, 0.08);
+    --border-hover: rgba(43, 108, 176, 0.3);
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    --shadow-hover: 0 8px 30px rgba(43, 108, 176, 0.1);
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-serif: 'Playfair Display', Georgia, serif;
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -64,7 +64,7 @@ ul { list-style: none; }
 }
 
 #header.scrolled {
-    background: rgba(10, 15, 26, 0.92);
+    background: rgba(250, 251, 252, 0.92);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     padding: 12px 0;
@@ -136,7 +136,7 @@ ul { list-style: none; }
 .mobile-toggle span {
     width: 24px;
     height: 2px;
-    background: var(--text-primary);
+    background: var(--text-secondary);
     border-radius: 2px;
     transition: var(--transition);
 }
@@ -155,8 +155,8 @@ ul { list-style: none; }
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(16, 185, 129, 0.08), transparent),
-        radial-gradient(ellipse 60% 40% at 80% 60%, rgba(245, 158, 11, 0.05), transparent);
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(43, 108, 176, 0.06), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 60%, rgba(217, 119, 6, 0.04), transparent);
     pointer-events: none;
 }
 
@@ -167,7 +167,7 @@ ul { list-style: none; }
     right: 10%;
     width: 300px;
     height: 300px;
-    border: 1px solid rgba(16, 185, 129, 0.06);
+    border: 1px solid rgba(43, 108, 176, 0.08);
     border-radius: 50%;
     animation: float 20s ease-in-out infinite;
 }
@@ -179,7 +179,7 @@ ul { list-style: none; }
     left: 15%;
     width: 200px;
     height: 200px;
-    border: 1px solid rgba(245, 158, 11, 0.06);
+    border: 1px solid rgba(217, 119, 6, 0.08);
     border-radius: 50%;
     animation: float 15s ease-in-out infinite reverse;
 }
@@ -258,7 +258,7 @@ ul { list-style: none; }
 .btn-primary:hover {
     background: var(--accent-light);
     transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(16, 185, 129, 0.3);
+    box-shadow: 0 8px 30px rgba(43, 108, 176, 0.25);
 }
 
 .btn-outline {
@@ -461,6 +461,7 @@ ul { list-style: none; }
     border-radius: 12px;
     padding: 36px;
     transition: var(--transition);
+    box-shadow: var(--shadow);
 }
 
 .skill-card:hover {
@@ -472,7 +473,7 @@ ul { list-style: none; }
 .skill-icon {
     width: 56px;
     height: 56px;
-    background: rgba(16, 185, 129, 0.1);
+    background: rgba(43, 108, 176, 0.08);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -495,17 +496,17 @@ ul { list-style: none; }
 
 .tag {
     padding: 6px 14px;
-    background: rgba(16, 185, 129, 0.08);
+    background: rgba(43, 108, 176, 0.06);
     color: var(--accent-light);
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 500;
-    border: 1px solid rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(43, 108, 176, 0.12);
     transition: var(--transition);
 }
 
 .tag:hover {
-    background: rgba(16, 185, 129, 0.15);
+    background: rgba(43, 108, 176, 0.12);
 }
 
 /* ===== Projects Section ===== */
@@ -527,6 +528,7 @@ ul { list-style: none; }
     transition: var(--transition);
     display: flex;
     flex-direction: column;
+    box-shadow: var(--shadow);
 }
 
 .project-card:hover {
@@ -546,7 +548,7 @@ ul { list-style: none; }
     font-family: var(--font-serif);
     font-size: 2rem;
     font-weight: 700;
-    color: rgba(16, 185, 129, 0.2);
+    color: rgba(43, 108, 176, 0.15);
 }
 
 .project-role {
@@ -554,7 +556,7 @@ ul { list-style: none; }
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--gold);
-    background: rgba(245, 158, 11, 0.1);
+    background: rgba(217, 119, 6, 0.08);
     padding: 4px 12px;
     border-radius: 4px;
     font-weight: 600;
@@ -608,7 +610,7 @@ ul { list-style: none; }
     font-size: 0.75rem;
     color: var(--text-muted);
     padding: 4px 10px;
-    background: rgba(148, 163, 184, 0.08);
+    background: rgba(0, 0, 0, 0.04);
     border-radius: 4px;
 }
 
@@ -658,7 +660,7 @@ ul { list-style: none; }
 
 .timeline-item:first-child .timeline-marker {
     background: var(--accent);
-    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+    box-shadow: 0 0 0 4px rgba(43, 108, 176, 0.15);
 }
 
 .timeline-content {
@@ -667,6 +669,7 @@ ul { list-style: none; }
     border-radius: 12px;
     padding: 28px;
     transition: var(--transition);
+    box-shadow: var(--shadow);
 }
 
 .timeline-content:hover {
@@ -770,6 +773,7 @@ ul { list-style: none; }
     padding: 36px;
     transition: var(--transition);
     position: relative;
+    box-shadow: var(--shadow);
 }
 
 .testimonial-card:hover {
@@ -839,6 +843,7 @@ ul { list-style: none; }
     padding: 36px;
     text-align: center;
     transition: var(--transition);
+    box-shadow: var(--shadow);
 }
 
 .contact-card:hover {
@@ -851,7 +856,7 @@ ul { list-style: none; }
     width: 56px;
     height: 56px;
     margin: 0 auto 16px;
-    background: rgba(16, 185, 129, 0.1);
+    background: rgba(43, 108, 176, 0.08);
     border-radius: 12px;
     display: flex;
     align-items: center;
