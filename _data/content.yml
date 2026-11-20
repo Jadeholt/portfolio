@@ -29,8 +29,8 @@ stats:
       label: Years Experience
     - number: X00M
       label: SEK Annual RISE Landscape
-    - number: '2'
-      label: RISE Programs
+    - number: '450+'
+      label: SAP Systems Operated
     - number: '27'
       label: Systems in Largest Carve-Out
   sdm:
@@ -62,7 +62,6 @@ about:
       - Leads an end-to-end architecture review of an on-premise S/4HANA 2023 landscape for a Nordic property developer
       - Target architecture for SAP document management and archiving, including evaluation of SAP Document Management Service on BTP
       - Integration architecture for SAP SuccessFactors, comparing SAP Integration Suite with Azure Integration Services
-      - Review of Epiroc's global SAP BTP account structure covering security, operations and cost, with a prioritized action plan
       - Architected SAP Cloud Platform PoC with Azure AD integration and principal propagation at Sandvik
       - Technical solution design for the carve-out of 27 SAP systems at Sandvik
   sdm:
@@ -71,7 +70,7 @@ about:
     achievements:
       - Service Delivery Manager for one of Sweden's largest SAP landscapes, a RISE PCE environment with an annual run cost exceeding x00 million SEK
       - Managed SAP service delivery budgets exceeding tens of millions SEK with 40+ team members at Alleima
-      - Developed Target Operating Models for RISE transitions at one of Sweden's largest SAP landscapes and at Epiroc
+      - Developed Target Operating Models for the RISE transition at one of Sweden's largest SAP landscapes
       - Member of the Steering Committee for Technology Team at Ernst & Young Sweden
       - Managed Application Management Service Delivery across Capgemini and CGI partnerships
       - Strategic planning and governance for SAP landscapes during organizational restructurings at Sandvik
@@ -279,35 +278,21 @@ projects:
   - title: SONIC RISE Program
     client: Epiroc AB
     period: 2024 – 2025
-    role_sdm: Advisor
+    role_sdm: ''
     role_basis: SAP Basis
-    categories: architect sap-basis
-    profiles: arch sdm basis
-    highlights_sdm:
-      - Contributed to Target Operating Model development, clarifying roles and interaction patterns between SAP, delivery partners, and Epiroc
-      - Active involvement in architectural discussions and platform-related decision-making aligned with RISE PCE standards
-      - Worked closely with program stakeholders, SAP representatives, and delivery partners on governance alignment
+    categories: sap-basis
+    profiles: basis
+    highlights_sdm: []
     highlights_basis:
       - "Primary technical resource supporting SONIC RISE — hands-on SAP Basis and technical support"
       - Technical coordination, review of solution designs, and alignment between SAP, SIs, and internal IT teams
       - Ensured architectural decisions were technically feasible, supportable, and aligned with long-term platform sustainability
-    tags_sdm:
-      - SAP RISE
-      - Operating Model
+    tags_sdm: []
     tags_basis:
       - SAP RISE
       - SAP Basis
       - Technical Delivery
 
-    role_arch: Architect
-    highlights_arch:
-      - Active involvement in architectural discussions and platform decisions aligned with RISE PCE standards
-      - Review of solution designs and alignment between SAP, system integrators, and internal IT teams
-      - Ensured architectural decisions were technically feasible, supportable, and sustainable for the long term
-    tags_arch:
-      - SAP RISE
-      - Solution Design
-      - Architecture
   - title: SAP Application Management Service Delivery
     client: Alleima AB
     period: 2023 – 2025
@@ -651,10 +636,10 @@ experience:
     title_sdm: "Independent Consultant, SAP Service Delivery Manager"
     title_basis: "Independent Consultant — SAP Basis & Platform Architect"
     description_arch: >-
-      Operating as an independent SAP architect. Defining and governing RISE with SAP platform architecture for one of Sweden's largest SAP landscapes, and leading an architecture review of an on-premise S/4HANA landscape for a Nordic property developer covering document management, integration and SAP BTP. Delivering SAP BTP platform reviews for Epiroc.
+      Operating as an independent SAP architect. Defining and governing RISE with SAP platform architecture for one of Sweden's largest SAP landscapes, and leading an architecture review of an on-premise S/4HANA landscape for a Nordic property developer covering document management, integration and SAP BTP.
     company: Nelson Invest Sweden
     description_sdm: >-
-      Operating as an independent SAP Service Delivery Manager. Leading service delivery governance, Target Operating Model design, vendor management, and financial oversight for enterprise clients including Alleima, Epiroc, and one of Sweden's largest SAP landscapes (client confidential). Managing budgets, teams, and strategic planning for RISE transitions.
+      Operating as an independent SAP Service Delivery Manager. Leading service delivery governance, Target Operating Model design, vendor management, and financial oversight for enterprise clients including Alleima and one of Sweden's largest SAP landscapes (client confidential). Managing budgets, teams, and strategic planning for RISE transitions.
     description_basis: >-
       Operating as an independent SAP Basis Consultant and Platform Architect. Delivering hands-on SAP Basis technical support, RISE platform architecture, clean core compliance, and technical design validation for enterprise clients including Epiroc, Alleima, and one of Sweden's largest SAP landscapes (client confidential).
 
