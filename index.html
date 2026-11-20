@@ -10,8 +10,9 @@ layout: null
     <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body data-profile="sdm">
+<body data-profile="arch">
     {% assign c = site.data.content %}
+    {% assign profile_keys = "arch,sdm,basis" | split: "," %}
 
     <!-- Header -->
     <header id="header">
@@ -34,13 +35,17 @@ layout: null
     <!-- Profile Switch -->
     <div class="profile-switch" id="profileSwitch">
         <div class="profile-switch-inner">
-            <button class="profile-btn active" data-profile="sdm">
+            <button class="profile-btn active" data-profile="arch">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                SAP Architect
+            </button>
+            <button class="profile-btn" data-profile="sdm">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 Service Delivery Manager
             </button>
             <button class="profile-btn" data-profile="basis">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                SAP Basis Consultant
+                SAP Basis
             </button>
         </div>
     </div>
@@ -49,16 +54,13 @@ layout: null
     <section id="home" class="hero">
         <div class="hero-bg-pattern"></div>
         <div class="hero-content">
-            <div class="profile-content" data-show="sdm">
-                <p class="hero-greeting reveal">{{ c.hero.sdm.greeting }}</p>
+            {% for p in profile_keys %}
+            <div class="profile-content" data-show="{{ p }}">
+                <p class="hero-greeting reveal">{{ c.hero[p].greeting }}</p>
                 <h1 class="hero-title reveal"><span class="line">{{ c.name | split: ' ' | first }}</span><span class="line highlight">{{ c.name | split: ' ' | last }}</span></h1>
-                <p class="hero-description reveal">{{ c.hero.sdm.description }}</p>
+                <p class="hero-description reveal">{{ c.hero[p].description }}</p>
             </div>
-            <div class="profile-content" data-show="basis">
-                <p class="hero-greeting reveal">{{ c.hero.basis.greeting }}</p>
-                <h1 class="hero-title reveal"><span class="line">{{ c.name | split: ' ' | first }}</span><span class="line highlight">{{ c.name | split: ' ' | last }}</span></h1>
-                <p class="hero-description reveal">{{ c.hero.basis.description }}</p>
-            </div>
+            {% endfor %}
             <div class="hero-buttons reveal">
                 <a href="#projects" class="btn btn-primary">View Projects</a>
                 <a href="#contact" class="btn btn-outline">Get In Touch</a>
@@ -70,9 +72,9 @@ layout: null
     <!-- Stats Section -->
     <section class="stats">
         <div class="container">
-            {% for profile in site.data.content.stats %}
-            <div class="stats-grid profile-content" data-show="{{ profile[0] }}">
-                {% for stat in profile[1] %}
+            {% for p in profile_keys %}
+            <div class="stats-grid profile-content" data-show="{{ p }}">
+                {% for stat in c.stats[p] %}
                 <div class="stat-card reveal">
                     <span class="stat-number">{{ stat.number }}</span>
                     <span class="stat-label">{{ stat.label }}</span>
@@ -98,13 +100,13 @@ layout: null
                     </div>
                 </div>
                 <div class="about-text reveal">
-                    {% for profile_name in site.data.content.about %}
-                    <div class="profile-content" data-show="{{ profile_name[0] }}">
-                        <p class="about-intro">{{ profile_name[1].intro }}</p>
+                    {% for p in profile_keys %}
+                    <div class="profile-content" data-show="{{ p }}">
+                        <p class="about-intro">{{ c.about[p].intro }}</p>
                         <div class="achievements-box">
                             <h3>Key Achievements</h3>
                             <ul class="achievements-list">
-                                {% for item in profile_name[1].achievements %}
+                                {% for item in c.about[p].achievements %}
                                 <li>{{ item }}</li>
                                 {% endfor %}
                             </ul>
@@ -123,9 +125,9 @@ layout: null
                 <span class="section-tag">What I bring</span>
                 <h2 class="section-title">Skills & Expertise</h2>
             </div>
-            {% for profile_name in c.skills %}
-            <div class="skills-grid profile-content" data-show="{{ profile_name[0] }}">
-                {% for skill in profile_name[1] %}
+            {% for p in profile_keys %}
+            <div class="skills-grid profile-content" data-show="{{ p }}">
+                {% for skill in c.skills[p] %}
                 <div class="skill-card reveal">
                     <div class="skill-icon">
                         {% if skill.icon == 'users' %}
@@ -176,26 +178,19 @@ layout: null
                 <div class="project-card reveal" data-category="{{ project.categories }}" data-profile="{{ project.profiles }}">
                     <div class="project-header">
                         <span class="project-number">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
-                        {% if project.role_sdm != "" %}<span class="project-role profile-content" data-show="sdm">{{ project.role_sdm }}</span>{% endif %}
-                        {% if project.role_basis != "" %}<span class="project-role profile-content" data-show="basis">{{ project.role_basis }}</span>{% endif %}
+                        {% for p in profile_keys %}{% assign k = 'role_' | append: p %}{% if project[k] and project[k] != "" %}<span class="project-role profile-content" data-show="{{ p }}">{{ project[k] }}</span>{% endif %}{% endfor %}
                     </div>
                     <h3 class="project-title">{{ project.title }}</h3>
                     <p class="project-client">{{ project.client }} — {{ project.period }}</p>
                     <ul class="project-highlights">
-                        {% for h in project.highlights_sdm %}
-                        <li class="profile-content" data-show="sdm">{{ h }}</li>
-                        {% endfor %}
-                        {% for h in project.highlights_basis %}
-                        <li class="profile-content" data-show="basis">{{ h }}</li>
-                        {% endfor %}
+                        {% for p in profile_keys %}{% assign k = 'highlights_' | append: p %}{% for h in project[k] %}
+                        <li class="profile-content" data-show="{{ p }}">{{ h }}</li>
+                        {% endfor %}{% endfor %}
                     </ul>
                     <div class="project-tags">
-                        {% for t in project.tags_sdm %}
-                        <span class="profile-content" data-show="sdm">{{ t }}</span>
-                        {% endfor %}
-                        {% for t in project.tags_basis %}
-                        <span class="profile-content" data-show="basis">{{ t }}</span>
-                        {% endfor %}
+                        {% for p in profile_keys %}{% assign k = 'tags_' | append: p %}{% for t in project[k] %}
+                        <span class="profile-content" data-show="{{ p }}">{{ t }}</span>
+                        {% endfor %}{% endfor %}
                     </div>
                 </div>
                 {% endfor %}
@@ -216,19 +211,17 @@ layout: null
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <span class="timeline-date">{{ job.period }}</span>
-                        {% if job.title_sdm == job.title_basis %}
+                        {% if job.title_arch == job.title_sdm and job.title_sdm == job.title_basis %}
                         <h3>{{ job.title_sdm }}</h3>
-                        {% else %}
-                        <h3 class="profile-content" data-show="sdm">{{ job.title_sdm }}</h3>
-                        <h3 class="profile-content" data-show="basis">{{ job.title_basis }}</h3>
-                        {% endif %}
+                        {% else %}{% for p in profile_keys %}{% assign k = 'title_' | append: p %}
+                        <h3 class="profile-content" data-show="{{ p }}">{{ job[k] }}</h3>
+                        {% endfor %}{% endif %}
                         <span class="timeline-company">{{ job.company }}</span>
-                        {% if job.description_sdm == job.description_basis %}
+                        {% if job.description_arch == job.description_sdm and job.description_sdm == job.description_basis %}
                         <p>{{ job.description_sdm }}</p>
-                        {% else %}
-                        <p class="profile-content" data-show="sdm">{{ job.description_sdm }}</p>
-                        <p class="profile-content" data-show="basis">{{ job.description_basis }}</p>
-                        {% endif %}
+                        {% else %}{% for p in profile_keys %}{% assign k = 'description_' | append: p %}
+                        <p class="profile-content" data-show="{{ p }}">{{ job[k] }}</p>
+                        {% endfor %}{% endif %}
                     </div>
                 </div>
                 {% endfor %}

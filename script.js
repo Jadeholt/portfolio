@@ -118,3 +118,19 @@ filterButtons.forEach(btn => {
         });
     });
 });
+
+// ===== Renumber visible project cards =====
+function renumberProjects() {
+    let n = 0;
+    document.querySelectorAll('.project-card').forEach(card => {
+        if (card.offsetParent === null) return;
+        n += 1;
+        const num = card.querySelector('.project-number');
+        if (num) num.textContent = String(n).padStart(2, '0');
+    });
+}
+
+document.querySelectorAll('.profile-btn, .filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => requestAnimationFrame(renumberProjects));
+});
+renumberProjects();

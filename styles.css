@@ -107,30 +107,30 @@ ul { list-style: none; }
 }
 
 /* ===== Profile Content Visibility ===== */
-.profile-content {
+.profile-content,
+.profile-content.stats-grid,
+.profile-content.skills-grid {
     display: none;
 }
 
-body[data-profile="sdm"] .profile-content[data-show="sdm"] {
-    display: block;
-}
-
+body[data-profile="arch"] .profile-content[data-show="arch"],
+body[data-profile="sdm"] .profile-content[data-show="sdm"],
 body[data-profile="basis"] .profile-content[data-show="basis"] {
     display: block;
 }
 
+body[data-profile="arch"] .profile-content[data-show="arch"].stats-grid,
 body[data-profile="sdm"] .profile-content[data-show="sdm"].stats-grid,
 body[data-profile="basis"] .profile-content[data-show="basis"].stats-grid,
+body[data-profile="arch"] .profile-content[data-show="arch"].skills-grid,
 body[data-profile="sdm"] .profile-content[data-show="sdm"].skills-grid,
 body[data-profile="basis"] .profile-content[data-show="basis"].skills-grid {
     display: grid;
 }
 
 /* Profile-based project visibility */
-body[data-profile="sdm"] .project-card:not([data-profile*="sdm"]) {
-    display: none;
-}
-
+body[data-profile="arch"] .project-card:not([data-profile*="arch"]),
+body[data-profile="sdm"] .project-card:not([data-profile*="sdm"]),
 body[data-profile="basis"] .project-card:not([data-profile*="basis"]) {
     display: none;
 }
@@ -147,37 +147,35 @@ body[data-profile="basis"] .project-card:not([data-profile*="basis"]) {
     display: none;
 }
 
-body[data-profile="sdm"] .project-header .profile-content[data-show="sdm"],
-body[data-profile="sdm"] .project-tags .profile-content[data-show="sdm"],
-body[data-profile="sdm"] .project-highlights .profile-content[data-show="sdm"] {
-    display: list-item;
-}
-
-body[data-profile="basis"] .project-header .profile-content[data-show="basis"],
-body[data-profile="basis"] .project-tags .profile-content[data-show="basis"],
+body[data-profile="arch"] .project-highlights .profile-content[data-show="arch"],
+body[data-profile="sdm"] .project-highlights .profile-content[data-show="sdm"],
 body[data-profile="basis"] .project-highlights .profile-content[data-show="basis"] {
     display: list-item;
 }
 
+body[data-profile="arch"] .project-header .profile-content[data-show="arch"],
 body[data-profile="sdm"] .project-header .profile-content[data-show="sdm"],
 body[data-profile="basis"] .project-header .profile-content[data-show="basis"] {
     display: inline-block;
 }
 
+body[data-profile="arch"] .project-tags .profile-content[data-show="arch"],
 body[data-profile="sdm"] .project-tags .profile-content[data-show="sdm"],
 body[data-profile="basis"] .project-tags .profile-content[data-show="basis"] {
     display: inline;
 }
 
-/* Timeline h3 and p dual content */
+/* Timeline h3 and p per-profile content */
 .timeline-content h3.profile-content,
 .timeline-content p.profile-content {
     display: none;
 }
 
+body[data-profile="arch"] .timeline-content h3.profile-content[data-show="arch"],
 body[data-profile="sdm"] .timeline-content h3.profile-content[data-show="sdm"],
-body[data-profile="sdm"] .timeline-content p.profile-content[data-show="sdm"],
 body[data-profile="basis"] .timeline-content h3.profile-content[data-show="basis"],
+body[data-profile="arch"] .timeline-content p.profile-content[data-show="arch"],
+body[data-profile="sdm"] .timeline-content p.profile-content[data-show="sdm"],
 body[data-profile="basis"] .timeline-content p.profile-content[data-show="basis"] {
     display: block;
 }
@@ -1126,8 +1124,15 @@ body[data-profile="basis"] .timeline-content p.profile-content[data-show="basis"
     .profile-btn {
         flex: 1;
         justify-content: center;
-        padding: 8px 12px;
-        font-size: 0.75rem;
+        padding: 8px 8px;
+        font-size: 0.72rem;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .profile-btn svg {
+        display: none;
     }
 
     .mobile-toggle {
